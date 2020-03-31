@@ -1,3 +1,4 @@
+# Demo single CDP 7 with worlwidebankdemo data
 Single node CDP 7.0.3 including:
 Cloudera Manager (60 day trial license included) - for managing the services
 Kerberos - for authentication (via local MIT KDC)○Ranger - for authorization (via both resource/tag based policies for accessand masking)
