@@ -38,10 +38,11 @@ yum install -y git
 ```
 curl -sSL https://gist.github.com/abajwa-hw/bca3d23fe146c3ebd59a9b5fd19480a3/raw | sudo -E sh
 git clone https://github.com/fabiog1901/SingleNodeCDPCluster.git
-cd SingleNodeCDPCluster./setup_krb.sh gcp templates/wwbank_krb.json
+cd SingleNodeCDPCluster
+./setup_krb.sh gcp templates/wwbank_krb.json
 ```
 ### Setup worldwide bank demo using ​script
 ```
-curl -sSL https://raw.githubusercontent.com/abajwa-hw/masterclass/master/ranger-atlas/setup-dc-703.sh | sudo -Ebash
+curl -sSL https://raw.githubusercontent.com/abajwa-hw/masterclass/master/ranger-atlas/setup-dc-703.sh | sudo -E bash
 ```
 Once the script completes, you will need to restart Zeppelin once (via CM) for it to pick up thedemo notebooks
