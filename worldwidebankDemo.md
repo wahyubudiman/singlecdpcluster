@@ -46,3 +46,16 @@ cd SingleNodeCDPCluster
 curl -sSL https://raw.githubusercontent.com/abajwa-hw/masterclass/master/ranger-atlas/setup-dc-703.sh | sudo -E bash
 ```
 Once the script completes, you will need to restart Zeppelin once (via CM) for it to pick up thedemo notebooks
+
+### Accessing cluster resources 
+### CDP urls
+- Access CM at :7180 as admin/admin
+- Access Ranger at :6080. ​Ranger login is admin/BadPass#1
+- Access Atlas at :31000. ​Atlas login is admin/BadPass#1
+- Access ​Zeppelin​ at :​8885. ​
+  - Zeppelin user​s​ logins​ are:
+    - joe_analyst = BadPass#1
+    - ivanna_eu_hr = BadPass#1
+    - etl_user = BadPass#1
+- Access DAS at :30800
+
