@@ -41,6 +41,7 @@ sudo tee /var/kerberos/krb5kdc/kdc.conf > /dev/null << EOF
 [kdcdefaults]
  kdc_ports = 88
  kdc_tcp_ports = 88
+
 [realms]
  ${realm} = {
  acl_file = /var/kerberos/krb5kdc/kadm5.acl
@@ -48,13 +49,15 @@ sudo tee /var/kerberos/krb5kdc/kdc.conf > /dev/null << EOF
  admin_keytab = /var/kerberos/krb5kdc/kadm5.keytab
  supported_enctypes = aes256-cts-hmac-sha1-96:normal aes128-cts-hmac-sha1-96:normal arcfour-hmac-md5:normal
  max_renewable_life = 7d
-}
+ }
 EOF
 
 
  
 echo $kdcpassword > passwd
 echo $kdcpassword >> passwd
+#create database
+#kdb5_util create -s -r CLOUDERA.COM
 sudo kdb5_util create -s < passwd
 
 
@@ -85,7 +88,7 @@ kadmin.local -q "modprinc -maxrenewlife 7day krbtgt/${realm}@${realm}"
 
 echo "For testing KDC run below:"
 echo kadmin -p admin/admin -w $kdcpassword -r $realm -q \"get_principal admin/admin\"
-
+#echo kadmin -p admin/admin -w BadPass#1 -r CLOUDERA.COM -q "get_principal admin/admin"
 echo kadmin -p cloudera-scm/admin -w $kdcpassword -r $realm -q \"get_principal cloudera-scm/admin\"
 
 echo "KDC setup complete"

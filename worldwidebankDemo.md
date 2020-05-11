@@ -37,7 +37,10 @@ yum install -y git
 ### setup KDC
 ```
 curl -sSL https://gist.github.com/abajwa-hw/bca3d23fe146c3ebd59a9b5fd19480a3/raw | sudo -E sh
-git clone https://github.com/fabiog1901/SingleNodeCDPCluster.git
+or 
+sh DemoCDP7_WorldWideBank/setup_kdc.sh 
+
+git clone https://github.com/wahyubudiman/singlecdpcluster.git
 cd SingleNodeCDPCluster
 ./setup_krb.sh gcp templates/wwbank_krb.json
 ```
