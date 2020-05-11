@@ -62,3 +62,25 @@ Once the script completes, you will need to restart Zeppelin once (via CM) for i
     - etl_user = BadPass#1
 - Access DAS at :30800
 
+Start Service base on order CDP 7 :
+- Kudu
+- HDFS
+- Solr
+- Ranger
+- Kafka
+- Yarn
+- Hbase
+- Ozone
+- Phoenix
+- Atlas
+- Spark
+- Hive
+- Oozie
+- Impala
+- Hive on Tez
+- Livy
+- Data Analytic Studio
+- Hue
+- Zeppelin
+
+
