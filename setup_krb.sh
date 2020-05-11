@@ -12,7 +12,7 @@ timedatectl set-timezone UTC
 echo "-- Install Java OpenJDK8 and other tools"
 yum install -y java-1.8.0-openjdk-devel vim wget curl git bind-utils rng-tools
 yum install -y epel-release
-yum install -y python-pip
+yum install -y python-pip chrony
 
 cp /usr/lib/systemd/system/rngd.service /etc/systemd/system/
 systemctl daemon-reload
