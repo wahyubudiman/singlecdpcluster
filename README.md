@@ -44,7 +44,7 @@ To install Schema Registry, you must use an appropriate template file, like `all
 ```
 sudo su -
 yum install -y git
-git clone https://github.com/fabiog1901/SingleNodeCDPCluster.git
+git clone https://github.com/wahyubudiman/singlecdpcluster.git
 cd SingleNodeCDPCluster
 ```
 
@@ -117,3 +117,12 @@ sdb      8:16   0 1000G  0 disk
 
 $ ./setup.sh gcp templates/iot_workshop.json /dev/sdb
 ```
+Local VM Standard, Use GCP Templates
+```
+$ lsblk
+NAME   MAJ:MIN RM  SIZE RO TYPE MOUNTPOINT
+sda      8:0    0  100G  0 disk
+└─sda1   8:1    0  100G  0 part /
+sdb      8:16   0 1000G  0 disk
+
+$ ./setup.sh gcp templates/iot_workshop.json /dev/sdb
