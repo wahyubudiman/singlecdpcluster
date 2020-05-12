@@ -1,0 +1,529 @@
+<!DOCTYPE html>
+<!-- saved from url=(0108)https://mtplayer.mindtickle.com/pdfViewer/?width=547&height=401&showPreviousViewOnLoad=false&reset_to_page=1 -->
+<html dir="ltr" mozdisallowselectionprint="" moznomarginboxes=""><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+	<meta name="google" content="notranslate">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>PDF.js viewer</title>
+	<!--<base target="_blank">--><base href="." target="_blank">
+
+	<link rel="stylesheet" href="./mt-pdfplayer-min.css" type="text/css">
+
+	<link rel="resource" type="application/l10n" href="https://mtplayer.mindtickle.com/pdfViewer/web/locale/locale.properties">
+
+	<!-- mixPanel script starts -->
+	
+	<script type="text/javascript" async="" src="./mixpanel-2-latest.min.js"></script><script type="text/javascript">
+		var env = "prod";
+		var cdn_url = "https://dnqlbe0jdvu8q.cloudfront.net/mtplayer-avengers/prod/";
+		var pdfWorker_cdn = cdn_url+"mt-pdfworker-min.js?v=1.5";
+		var mixpanel_mtplayer_token= "17e8d3f013ea71705b38e7fd1f2c9924";
+		var mixpanel_mtplayer_distinct_id = "MTPLAYER-SERVICE";
+
+	if (mixpanel_mtplayer_token && mixpanel_mtplayer_distinct_id && env) {
+
+		(function (c, a) {
+    		if (!a.__SV) {
+        		var b = window; try { var d, m, j, k = b.location, f = k.hash; d = function (a, b) { return (m = a.match(RegExp(b + "=([^&]*)"))) ? m[1] : null }; f && d(f, "state") && (j = JSON.parse(decodeURIComponent(d(f, "state"))), "mpeditor" === j.action && (b.sessionStorage.setItem("_mpcehash", f), history.replaceState(j.desiredHash || "", c.title, k.pathname + k.search))) } catch (n) { } var l, h; window.mixpanel = a; a._i = []; a.init = function (b, d, g) {
+            		function c(b, i) {
+                		var a = i.split("."); 2 == a.length && (b = b[a[0]], i = a[1]); b[i] = function () {
+                    	b.push([i].concat(Array.prototype.slice.call(arguments,
+                        0)))
+                }
+            } var e = a; "undefined" !== typeof g ? e = a[g] = [] : g = "mixpanel"; e.people = e.people || []; e.toString = function (b) { var a = "mixpanel"; "mixpanel" !== g && (a += "." + g); b || (a += " (stub)"); return a }; e.people.toString = function () { return e.toString(1) + ".people (stub)" }; l = "disable time_event track track_pageview track_links track_forms track_with_groups add_group set_group remove_group register register_once alias unregister identify name_tag set_config reset opt_in_tracking opt_out_tracking has_opted_in_tracking has_opted_out_tracking clear_opt_in_out_tracking people.set people.set_once people.unset people.increment people.append people.union people.track_charge people.clear_charges people.delete_user people.remove".split(" ");
+            for (h = 0; h < l.length; h++)c(e, l[h]); var f = "set set_once union unset remove delete".split(" "); e.get_group = function () { function a(c) { b[c] = function () { call2_args = arguments; call2 = [c].concat(Array.prototype.slice.call(call2_args, 0)); e.push([d, call2]) } } for (var b = {}, d = ["get_group"].concat(Array.prototype.slice.call(arguments, 0)), c = 0; c < f.length; c++)a(f[c]); return b }; a._i.push([b, d, g])
+        	}; a.__SV = 1.2; b = c.createElement("script"); b.type = "text/javascript"; b.async = !0; b.src = "undefined" !== typeof MIXPANEL_CUSTOM_LIB_URL ?
+            MIXPANEL_CUSTOM_LIB_URL : "file:" === c.location.protocol && "//cdn.mxpnl.com/libs/mixpanel-2-latest.min.js".match(/^\/\//) ? "https://cdn.mxpnl.com/libs/mixpanel-2-latest.min.js" : "//cdn.mxpnl.com/libs/mixpanel-2-latest.min.js"; d = c.getElementsByTagName("script")[0]; d.parentNode.insertBefore(b, d)
+    		}
+		})(document, window.mixpanel || []);
+		mixpanel.init(mixpanel_mtplayer_token);
+	}
+	</script>
+	
+	<!-- mixpanel script ends -->
+
+	<script type="text/javascript">
+		var pdf_url = "https://cf-us1-mtdocs-box-processed.mindtickle.com/1232801716776842772/doc.pdf?Policy=eyJTdGF0ZW1lbnQiOiBbeyJSZXNvdXJjZSI6Imh0dHBzOi8vY2YtdXMxLW10ZG9jcy1ib3gtcHJvY2Vzc2VkLm1pbmR0aWNrbGUuY29tLzEyMzI4MDE3MTY3NzY4NDI3NzIvKiIsIkNvbmRpdGlvbiI6eyJEYXRlTGVzc1RoYW4iOnsiQVdTOkVwb2NoVGltZSI6MTU5MTg1NzQ2MX0sIklwQWRkcmVzcyI6eyJBV1M6U291cmNlSXAiOiIwLjAuMC4wLzAifSwiRGF0ZUdyZWF0ZXJUaGFuIjp7IkFXUzpFcG9jaFRpbWUiOjE0NDQ5NzcxMTZ9fX1dfQ__&Signature=bWpNO0xZhTuO97Bfd4GaZbXNZ7Ta98pxCYAghG7wvnsCJG~mR0HTDnL3bLMSDKc4wvvYp4uj~5HGluUPCK7MBU5E2IcNBRBNG87wXWYOALuxKx9ByAofvM7DKRd92tn~Rw~B6w02Pg5wBcwE048vCPoDgy91cuddMqGGcm7rHT8_&Key-Pair-Id=APKAJRHSQBGT5CW7P2CA";
+	</script>
+	<script src="./mt-pdfplayer-min.js"></script>
+	<script src="./jquery.min.1.6.js"></script>
+
+</head>
+<body tabindex="1" class="">
+
+<!-- Time starts... -->
+<script type="text/javascript">var startEpoch = Date.now();</script>
+
+<div class="docViewer_parentDiv" style="height: 100%;">
+	<div style="overflow:hidden, border:1px solid #bbb; height:100%;" id="topDiv">
+		<div style="top:50%;width:100%" class="pos_abs">
+			<div style="top:-50%;width:100%;display:none" class="pos_abs bignavigation">
+				<div style="top: -20px; left: 0px; opacity: 0.4;" class="leftClickDiv1 commonClick1 slideBack pos_abs"></div>
+				<div style="top: -20px; right: 0px; opacity: 1;" class="rightClickDiv1 commonClick1 slideForward pos_abs"></div>
+			</div>
+		</div>
+		<!--<div class="pos_rel floatL"style="left:50%;">
+			<div class="pos_rel floatL"style="left:-50%;">
+				<div id="DocViewer" style="float:left;position:relative" class="longpage"></div>
+
+			</div>
+		</div>-->
+		<!--<div style="height:40px;"></div>-->
+		<div id="outerContainer">
+
+			<div id="sidebarContainer">
+				<div id="toolbarSidebar">
+					<div class="splitToolbarButton toggled">
+						<button id="viewThumbnail" class="toolbarButton group toggled" title="Show Thumbnails" tabindex="2" data-l10n-id="thumbs">
+							<span data-l10n-id="thumbs_label">Thumbnails</span>
+						</button>
+						<button id="viewOutline" class="toolbarButton group" title="Show Document Outline" tabindex="3" data-l10n-id="outline" disabled="">
+							<span data-l10n-id="outline_label">Document Outline</span>
+						</button>
+						<button id="viewAttachments" class="toolbarButton group" title="Show Attachments" tabindex="4" data-l10n-id="attachments" disabled="">
+							<span data-l10n-id="attachments_label">Attachments</span>
+						</button>
+					</div>
+				</div>
+				<div id="sidebarContent">
+					<div id="thumbnailView"><a href="https://mtplayer.mindtickle.com/pdfViewer/?width=547&amp;height=401&amp;showPreviousViewOnLoad=false&amp;reset_to_page=1#page=1" title="Page 1"><div class="thumbnail selected" data-page-number="1"><div class="thumbnailSelectionRing" style="width: 100px; height: 128px;"></div></div></a><a href="https://mtplayer.mindtickle.com/pdfViewer/?width=547&amp;height=401&amp;showPreviousViewOnLoad=false&amp;reset_to_page=1#page=2" title="Page 2"><div class="thumbnail" data-page-number="2"><div class="thumbnailSelectionRing" style="width: 100px; height: 128px;"></div></div></a><a href="https://mtplayer.mindtickle.com/pdfViewer/?width=547&amp;height=401&amp;showPreviousViewOnLoad=false&amp;reset_to_page=1#page=3" title="Page 3"><div class="thumbnail" data-page-number="3"><div class="thumbnailSelectionRing" style="width: 100px; height: 128px;"></div></div></a><a href="https://mtplayer.mindtickle.com/pdfViewer/?width=547&amp;height=401&amp;showPreviousViewOnLoad=false&amp;reset_to_page=1#page=4" title="Page 4"><div class="thumbnail" data-page-number="4"><div class="thumbnailSelectionRing" style="width: 100px; height: 128px;"></div></div></a><a href="https://mtplayer.mindtickle.com/pdfViewer/?width=547&amp;height=401&amp;showPreviousViewOnLoad=false&amp;reset_to_page=1#page=5" title="Page 5"><div class="thumbnail" data-page-number="5"><div class="thumbnailSelectionRing" style="width: 100px; height: 128px;"></div></div></a><a href="https://mtplayer.mindtickle.com/pdfViewer/?width=547&amp;height=401&amp;showPreviousViewOnLoad=false&amp;reset_to_page=1#page=6" title="Page 6"><div class="thumbnail" data-page-number="6"><div class="thumbnailSelectionRing" style="width: 100px; height: 128px;"></div></div></a><a href="https://mtplayer.mindtickle.com/pdfViewer/?width=547&amp;height=401&amp;showPreviousViewOnLoad=false&amp;reset_to_page=1#page=7" title="Page 7"><div class="thumbnail" data-page-number="7"><div class="thumbnailSelectionRing" style="width: 100px; height: 128px;"></div></div></a><a href="https://mtplayer.mindtickle.com/pdfViewer/?width=547&amp;height=401&amp;showPreviousViewOnLoad=false&amp;reset_to_page=1#page=8" title="Page 8"><div class="thumbnail" data-page-number="8"><div class="thumbnailSelectionRing" style="width: 100px; height: 128px;"></div></div></a><a href="https://mtplayer.mindtickle.com/pdfViewer/?width=547&amp;height=401&amp;showPreviousViewOnLoad=false&amp;reset_to_page=1#page=9" title="Page 9"><div class="thumbnail" data-page-number="9"><div class="thumbnailSelectionRing" style="width: 100px; height: 128px;"></div></div></a><a href="https://mtplayer.mindtickle.com/pdfViewer/?width=547&amp;height=401&amp;showPreviousViewOnLoad=false&amp;reset_to_page=1#page=10" title="Page 10"><div class="thumbnail" data-page-number="10"><div class="thumbnailSelectionRing" style="width: 100px; height: 128px;"></div></div></a><a href="https://mtplayer.mindtickle.com/pdfViewer/?width=547&amp;height=401&amp;showPreviousViewOnLoad=false&amp;reset_to_page=1#page=11" title="Page 11"><div class="thumbnail" data-page-number="11"><div class="thumbnailSelectionRing" style="width: 100px; height: 128px;"></div></div></a><a href="https://mtplayer.mindtickle.com/pdfViewer/?width=547&amp;height=401&amp;showPreviousViewOnLoad=false&amp;reset_to_page=1#page=12" title="Page 12"><div class="thumbnail" data-page-number="12"><div class="thumbnailSelectionRing" style="width: 100px; height: 128px;"></div></div></a><a href="https://mtplayer.mindtickle.com/pdfViewer/?width=547&amp;height=401&amp;showPreviousViewOnLoad=false&amp;reset_to_page=1#page=13" title="Page 13"><div class="thumbnail" data-page-number="13"><div class="thumbnailSelectionRing" style="width: 100px; height: 128px;"></div></div></a><a href="https://mtplayer.mindtickle.com/pdfViewer/?width=547&amp;height=401&amp;showPreviousViewOnLoad=false&amp;reset_to_page=1#page=14" title="Page 14"><div class="thumbnail" data-page-number="14"><div class="thumbnailSelectionRing" style="width: 100px; height: 128px;"></div></div></a><a href="https://mtplayer.mindtickle.com/pdfViewer/?width=547&amp;height=401&amp;showPreviousViewOnLoad=false&amp;reset_to_page=1#page=15" title="Page 15"><div class="thumbnail" data-page-number="15"><div class="thumbnailSelectionRing" style="width: 100px; height: 128px;"></div></div></a><a href="https://mtplayer.mindtickle.com/pdfViewer/?width=547&amp;height=401&amp;showPreviousViewOnLoad=false&amp;reset_to_page=1#page=16" title="Page 16"><div class="thumbnail" data-page-number="16"><div class="thumbnailSelectionRing" style="width: 100px; height: 128px;"></div></div></a><a href="https://mtplayer.mindtickle.com/pdfViewer/?width=547&amp;height=401&amp;showPreviousViewOnLoad=false&amp;reset_to_page=1#page=17" title="Page 17"><div class="thumbnail" data-page-number="17"><div class="thumbnailSelectionRing" style="width: 100px; height: 128px;"></div></div></a><a href="https://mtplayer.mindtickle.com/pdfViewer/?width=547&amp;height=401&amp;showPreviousViewOnLoad=false&amp;reset_to_page=1#page=18" title="Page 18"><div class="thumbnail" data-page-number="18"><div class="thumbnailSelectionRing" style="width: 100px; height: 128px;"></div></div></a><a href="https://mtplayer.mindtickle.com/pdfViewer/?width=547&amp;height=401&amp;showPreviousViewOnLoad=false&amp;reset_to_page=1#page=19" title="Page 19"><div class="thumbnail" data-page-number="19"><div class="thumbnailSelectionRing" style="width: 100px; height: 128px;"></div></div></a><a href="https://mtplayer.mindtickle.com/pdfViewer/?width=547&amp;height=401&amp;showPreviousViewOnLoad=false&amp;reset_to_page=1#page=20" title="Page 20"><div class="thumbnail" data-page-number="20"><div class="thumbnailSelectionRing" style="width: 100px; height: 128px;"></div></div></a><a href="https://mtplayer.mindtickle.com/pdfViewer/?width=547&amp;height=401&amp;showPreviousViewOnLoad=false&amp;reset_to_page=1#page=21" title="Page 21"><div class="thumbnail" data-page-number="21"><div class="thumbnailSelectionRing" style="width: 100px; height: 128px;"></div></div></a><a href="https://mtplayer.mindtickle.com/pdfViewer/?width=547&amp;height=401&amp;showPreviousViewOnLoad=false&amp;reset_to_page=1#page=22" title="Page 22"><div class="thumbnail" data-page-number="22"><div class="thumbnailSelectionRing" style="width: 100px; height: 128px;"></div></div></a><a href="https://mtplayer.mindtickle.com/pdfViewer/?width=547&amp;height=401&amp;showPreviousViewOnLoad=false&amp;reset_to_page=1#page=23" title="Page 23"><div class="thumbnail" data-page-number="23"><div class="thumbnailSelectionRing" style="width: 100px; height: 128px;"></div></div></a><a href="https://mtplayer.mindtickle.com/pdfViewer/?width=547&amp;height=401&amp;showPreviousViewOnLoad=false&amp;reset_to_page=1#page=24" title="Page 24"><div class="thumbnail" data-page-number="24"><div class="thumbnailSelectionRing" style="width: 100px; height: 128px;"></div></div></a><a href="https://mtplayer.mindtickle.com/pdfViewer/?width=547&amp;height=401&amp;showPreviousViewOnLoad=false&amp;reset_to_page=1#page=25" title="Page 25"><div class="thumbnail" data-page-number="25"><div class="thumbnailSelectionRing" style="width: 100px; height: 128px;"></div></div></a><a href="https://mtplayer.mindtickle.com/pdfViewer/?width=547&amp;height=401&amp;showPreviousViewOnLoad=false&amp;reset_to_page=1#page=26" title="Page 26"><div class="thumbnail" data-page-number="26"><div class="thumbnailSelectionRing" style="width: 100px; height: 128px;"></div></div></a><a href="https://mtplayer.mindtickle.com/pdfViewer/?width=547&amp;height=401&amp;showPreviousViewOnLoad=false&amp;reset_to_page=1#page=27" title="Page 27"><div class="thumbnail" data-page-number="27"><div class="thumbnailSelectionRing" style="width: 100px; height: 128px;"></div></div></a><a href="https://mtplayer.mindtickle.com/pdfViewer/?width=547&amp;height=401&amp;showPreviousViewOnLoad=false&amp;reset_to_page=1#page=28" title="Page 28"><div class="thumbnail" data-page-number="28"><div class="thumbnailSelectionRing" style="width: 100px; height: 128px;"></div></div></a><a href="https://mtplayer.mindtickle.com/pdfViewer/?width=547&amp;height=401&amp;showPreviousViewOnLoad=false&amp;reset_to_page=1#page=29" title="Page 29"><div class="thumbnail" data-page-number="29"><div class="thumbnailSelectionRing" style="width: 100px; height: 128px;"></div></div></a><a href="https://mtplayer.mindtickle.com/pdfViewer/?width=547&amp;height=401&amp;showPreviousViewOnLoad=false&amp;reset_to_page=1#page=30" title="Page 30"><div class="thumbnail" data-page-number="30"><div class="thumbnailSelectionRing" style="width: 100px; height: 128px;"></div></div></a><a href="https://mtplayer.mindtickle.com/pdfViewer/?width=547&amp;height=401&amp;showPreviousViewOnLoad=false&amp;reset_to_page=1#page=31" title="Page 31"><div class="thumbnail" data-page-number="31"><div class="thumbnailSelectionRing" style="width: 100px; height: 128px;"></div></div></a><a href="https://mtplayer.mindtickle.com/pdfViewer/?width=547&amp;height=401&amp;showPreviousViewOnLoad=false&amp;reset_to_page=1#page=32" title="Page 32"><div class="thumbnail" data-page-number="32"><div class="thumbnailSelectionRing" style="width: 100px; height: 128px;"></div></div></a><a href="https://mtplayer.mindtickle.com/pdfViewer/?width=547&amp;height=401&amp;showPreviousViewOnLoad=false&amp;reset_to_page=1#page=33" title="Page 33"><div class="thumbnail" data-page-number="33"><div class="thumbnailSelectionRing" style="width: 100px; height: 128px;"></div></div></a><a href="https://mtplayer.mindtickle.com/pdfViewer/?width=547&amp;height=401&amp;showPreviousViewOnLoad=false&amp;reset_to_page=1#page=34" title="Page 34"><div class="thumbnail" data-page-number="34"><div class="thumbnailSelectionRing" style="width: 100px; height: 128px;"></div></div></a><a href="https://mtplayer.mindtickle.com/pdfViewer/?width=547&amp;height=401&amp;showPreviousViewOnLoad=false&amp;reset_to_page=1#page=35" title="Page 35"><div class="thumbnail" data-page-number="35"><div class="thumbnailSelectionRing" style="width: 100px; height: 128px;"></div></div></a><a href="https://mtplayer.mindtickle.com/pdfViewer/?width=547&amp;height=401&amp;showPreviousViewOnLoad=false&amp;reset_to_page=1#page=36" title="Page 36"><div class="thumbnail" data-page-number="36"><div class="thumbnailSelectionRing" style="width: 100px; height: 128px;"></div></div></a><a href="https://mtplayer.mindtickle.com/pdfViewer/?width=547&amp;height=401&amp;showPreviousViewOnLoad=false&amp;reset_to_page=1#page=37" title="Page 37"><div class="thumbnail" data-page-number="37"><div class="thumbnailSelectionRing" style="width: 100px; height: 128px;"></div></div></a></div>
+					<div id="outlineView" class="hidden"></div>
+					<div id="attachmentsView" class="hidden"></div>
+				</div>
+			</div>  <!-- sidebarContainer -->
+
+			<div id="mainContainer">
+				<div class="findbar hidden doorHanger hiddenSmallView" id="findbar">
+					<label for="findInput" class="toolbarLabel" data-l10n-id="find_label">Find:</label>
+					<input id="findInput" class="toolbarField" tabindex="91">
+					<div class="splitToolbarButton">
+						<button class="toolbarButton findPrevious" title="Find the previous occurrence of the phrase" id="findPrevious" tabindex="92" data-l10n-id="find_previous">
+							<span data-l10n-id="find_previous_label">Previous</span>
+						</button>
+						<div class="splitToolbarButtonSeparator"></div>
+						<button class="toolbarButton findNext" title="Find the next occurrence of the phrase" id="findNext" tabindex="93" data-l10n-id="find_next">
+							<span data-l10n-id="find_next_label">Next</span>
+						</button>
+					</div>
+					<input type="checkbox" id="findHighlightAll" class="toolbarField" tabindex="94">
+					<label for="findHighlightAll" class="toolbarLabel" data-l10n-id="find_highlight">Highlight all</label>
+					<input type="checkbox" id="findMatchCase" class="toolbarField" tabindex="95">
+					<label for="findMatchCase" class="toolbarLabel" data-l10n-id="find_match_case_label">Match case</label>
+					<span id="findResultsCount" class="toolbarLabel hidden"></span>
+					<span id="findMsg" class="toolbarLabel"></span>
+				</div>  <!-- findbar -->
+			
+				<div id="secondaryToolbar" class="secondaryToolbar hidden doorHangerRight">
+		          <div id="secondaryToolbarButtonContainer">
+		            <button id="secondaryPresentationMode" class="secondaryToolbarButton presentationMode visibleLargeView hidden" title="Switch to Presentation Mode" tabindex="51" data-l10n-id="presentation_mode">
+		              <span data-l10n-id="presentation_mode_label">Presentation Mode</span>
+		            </button>
+		
+		            <button id="secondaryOpenFile" class="secondaryToolbarButton openFile visibleLargeView" title="Open File" tabindex="52" data-l10n-id="open_file">
+		              <span data-l10n-id="open_file_label">Open</span>
+		            </button>
+		
+		            <button id="secondaryPrint" class="secondaryToolbarButton print visibleMediumView" title="Print" tabindex="53" data-l10n-id="print">
+		              <span data-l10n-id="print_label">Print</span>
+		            </button>
+		
+		            <button id="secondaryDownload" class="secondaryToolbarButton download visibleMediumView" title="Download" tabindex="54" data-l10n-id="download">
+		              <span data-l10n-id="download_label">Download</span>
+		            </button>
+		
+		            <a href="https://mtplayer.mindtickle.com/pdfViewer/?width=547&amp;height=401&amp;showPreviousViewOnLoad=false&amp;reset_to_page=1#page=1&amp;zoom=auto,-199,792" id="secondaryViewBookmark" class="secondaryToolbarButton bookmark visibleSmallView" title="Current view (copy or open in new window)" tabindex="55" data-l10n-id="bookmark">
+		              <span data-l10n-id="bookmark_label">Current View</span>
+		            </a>
+		
+		            <div class="horizontalToolbarSeparator visibleLargeView"></div>
+		
+		            <button id="firstPage" class="secondaryToolbarButton firstPage" title="Go to First Page" tabindex="56" data-l10n-id="first_page" disabled="">
+		              <span data-l10n-id="first_page_label">Go to First Page</span>
+		            </button>
+		            <button id="lastPage" class="secondaryToolbarButton lastPage" title="Go to Last Page" tabindex="57" data-l10n-id="last_page">
+		              <span data-l10n-id="last_page_label">Go to Last Page</span>
+		            </button>
+		
+		            <div class="horizontalToolbarSeparator"></div>
+		
+		            <button id="pageRotateCw" class="secondaryToolbarButton rotateCw" title="Rotate Clockwise" tabindex="58" data-l10n-id="page_rotate_cw">
+		              <span data-l10n-id="page_rotate_cw_label">Rotate Clockwise</span>
+		            </button>
+		            <button id="pageRotateCcw" class="secondaryToolbarButton rotateCcw" title="Rotate Counterclockwise" tabindex="59" data-l10n-id="page_rotate_ccw">
+		              <span data-l10n-id="page_rotate_ccw_label">Rotate Counterclockwise</span>
+		            </button>
+		
+		            <div class="horizontalToolbarSeparator"></div>
+		
+		            <button id="cursorSelectTool" class="secondaryToolbarButton selectTool toggled" title="Enable Text Selection Tool" tabindex="60" data-l10n-id="cursor_text_select_tool">
+		              <span data-l10n-id="cursor_text_select_tool_label">Text Selection Tool</span>
+		            </button>
+		            <button id="cursorHandTool" class="secondaryToolbarButton handTool" title="Enable Hand Tool" tabindex="61" data-l10n-id="cursor_hand_tool">
+		              <span data-l10n-id="cursor_hand_tool_label">Hand Tool</span>
+		            </button>
+		
+		            <div class="horizontalToolbarSeparator"></div>
+		
+		            <button id="scrollVertical" class="secondaryToolbarButton scrollVertical toggled" title="Use Vertical Scrolling" tabindex="62" data-l10n-id="scroll_vertical">
+		              <span data-l10n-id="scroll_vertical_label">Vertical Scrolling</span>
+		            </button>
+		            <button id="scrollHorizontal" class="secondaryToolbarButton scrollHorizontal" title="Use Horizontal Scrolling" tabindex="63" data-l10n-id="scroll_horizontal">
+		              <span data-l10n-id="scroll_horizontal_label">Horizontal Scrolling</span>
+		            </button>
+		            <button id="scrollWrapped" class="secondaryToolbarButton scrollWrapped" title="Use Wrapped Scrolling" tabindex="64" data-l10n-id="scroll_wrapped">
+		              <span data-l10n-id="scroll_wrapped_label">Wrapped Scrolling</span>
+		            </button>
+		
+		            <div class="horizontalToolbarSeparator"></div>
+		
+		            <button id="spreadNone" class="secondaryToolbarButton spreadNone toggled" title="Do not join page spreads" tabindex="65" data-l10n-id="spread_none">
+		              <span data-l10n-id="spread_none_label">No Spreads</span>
+		            </button>
+		            <button id="spreadOdd" class="secondaryToolbarButton spreadOdd" title="Join page spreads starting with odd-numbered pages" tabindex="66" data-l10n-id="spread_odd">
+		              <span data-l10n-id="spread_odd_label">Odd Spreads</span>
+		            </button>
+		            <button id="spreadEven" class="secondaryToolbarButton spreadEven" title="Join page spreads starting with even-numbered pages" tabindex="67" data-l10n-id="spread_even">
+		              <span data-l10n-id="spread_even_label">Even Spreads</span>
+		            </button>
+		
+		            <div class="horizontalToolbarSeparator"></div>
+		
+		            <button id="documentProperties" class="secondaryToolbarButton documentProperties" title="Document Properties…" tabindex="68" data-l10n-id="document_properties">
+		              <span data-l10n-id="document_properties_label">Document Properties…</span>
+		            </button>
+		          </div>
+		        </div>  <!-- secondaryToolbar -->
+
+				<div class="toolbar hidden">
+					 <div id="toolbarContainer">
+			            <div id="toolbarViewer">
+			              <div id="toolbarViewerLeft">
+			                <button id="sidebarToggle" class="toolbarButton" title="Toggle Sidebar" tabindex="11" data-l10n-id="toggle_sidebar">
+			                  <span data-l10n-id="toggle_sidebar_label">Toggle Sidebar</span>
+			                </button>
+			                <div class="toolbarButtonSpacer"></div>
+			                <button id="viewFind" class="toolbarButton" title="Find in Document" tabindex="12" data-l10n-id="findbar">
+			                  <span data-l10n-id="findbar_label">Find</span>
+			                </button>
+			                <div class="splitToolbarButton hiddenSmallView">
+			                  <button class="toolbarButton pageUp" title="Previous Page" id="previous" tabindex="13" data-l10n-id="previous" disabled="">
+			                    <span data-l10n-id="previous_label">Previous</span>
+			                  </button>
+			                  <div class="splitToolbarButtonSeparator"></div>
+			                  <button class="toolbarButton pageDown" title="Next Page" id="next" tabindex="14" data-l10n-id="next">
+			                    <span data-l10n-id="next_label">Next</span>
+			                  </button>
+			                </div>
+			                <input type="number" id="pageNumber" class="toolbarField pageNumber" title="Page" value="1" size="4" min="1" tabindex="15" data-l10n-id="page" max="37">
+			                <span id="numPages" class="toolbarLabel">of 37</span>
+			              </div>
+			              <div id="toolbarViewerRight">
+			                <button id="presentationMode" class="toolbarButton presentationMode hiddenLargeView hidden" title="Switch to Presentation Mode" tabindex="31" data-l10n-id="presentation_mode">
+			                  <span data-l10n-id="presentation_mode_label">Presentation Mode</span>
+			                </button>
+			
+			                <button id="openFile" class="toolbarButton openFile hiddenLargeView" title="Open File" tabindex="32" data-l10n-id="open_file">
+			                  <span data-l10n-id="open_file_label">Open</span>
+			                </button>
+			
+			                <button id="print" class="toolbarButton print hiddenMediumView" title="Print" tabindex="33" data-l10n-id="print">
+			                  <span data-l10n-id="print_label">Print</span>
+			                </button>
+			
+			                <button id="download" class="toolbarButton download hiddenMediumView" title="Download" tabindex="34" data-l10n-id="download">
+			                  <span data-l10n-id="download_label">Download</span>
+			                </button>
+			                <a href="https://mtplayer.mindtickle.com/pdfViewer/?width=547&amp;height=401&amp;showPreviousViewOnLoad=false&amp;reset_to_page=1#page=1&amp;zoom=auto,-199,792" id="viewBookmark" class="toolbarButton bookmark hiddenSmallView" title="Current view (copy or open in new window)" tabindex="35" data-l10n-id="bookmark">
+			                  <span data-l10n-id="bookmark_label">Current View</span>
+			                </a>
+			
+			                <div class="verticalToolbarSeparator hiddenSmallView"></div>
+			
+			                <button id="secondaryToolbarToggle" class="toolbarButton" title="Tools" tabindex="36" data-l10n-id="tools">
+			                  <span data-l10n-id="tools_label">Tools</span>
+			                </button>
+			              </div>
+			              <div id="toolbarViewerMiddle">
+			                <div class="splitToolbarButton">
+			                  <button id="zoomOut" class="toolbarButton zoomOut" title="Zoom Out" tabindex="21" data-l10n-id="zoom_out">
+			                    <span data-l10n-id="zoom_out_label">Zoom Out</span>
+			                  </button>
+			                  <div class="splitToolbarButtonSeparator"></div>
+			                  <button id="zoomIn" class="toolbarButton zoomIn" title="Zoom In" tabindex="22" data-l10n-id="zoom_in">
+			                    <span data-l10n-id="zoom_in_label">Zoom In</span>
+			                   </button>
+			                </div>
+			                <span id="scaleSelectContainer" class="dropdownToolbarButton" style="display: inherit;">
+			                  <select id="scaleSelect" title="Zoom" tabindex="23" data-l10n-id="zoom">
+			                    <option id="pageAutoOption" title="" value="auto" selected="selected" data-l10n-id="page_scale_auto">Automatic Zoom</option>
+			                    <option id="pageActualOption" title="" value="page-actual" data-l10n-id="page_scale_actual">Actual Size</option>
+			                    <option id="pageFitOption" title="" value="page-fit" data-l10n-id="page_scale_fit">Page Fit</option>
+			                    <option id="pageWidthOption" title="" value="page-width" data-l10n-id="page_scale_width">Page Width</option>
+			                    <option id="customScaleOption" title="" value="custom" disabled="disabled" hidden="true"></option>
+			                    <option title="" value="0.5" data-l10n-id="page_scale_percent" data-l10n-args="{ &quot;scale&quot;: 50 }">50%</option>
+			                    <option title="" value="0.75" data-l10n-id="page_scale_percent" data-l10n-args="{ &quot;scale&quot;: 75 }">75%</option>
+			                    <option title="" value="1" data-l10n-id="page_scale_percent" data-l10n-args="{ &quot;scale&quot;: 100 }">100%</option>
+			                    <option title="" value="1.25" data-l10n-id="page_scale_percent" data-l10n-args="{ &quot;scale&quot;: 125 }">125%</option>
+			                    <option title="" value="1.5" data-l10n-id="page_scale_percent" data-l10n-args="{ &quot;scale&quot;: 150 }">150%</option>
+			                    <option title="" value="2" data-l10n-id="page_scale_percent" data-l10n-args="{ &quot;scale&quot;: 200 }">200%</option>
+			                    <option title="" value="3" data-l10n-id="page_scale_percent" data-l10n-args="{ &quot;scale&quot;: 300 }">300%</option>
+			                    <option title="" value="4" data-l10n-id="page_scale_percent" data-l10n-args="{ &quot;scale&quot;: 400 }">400%</option>
+			                  </select>
+			                </span>
+			              </div>
+			            </div>
+			            <div id="loadingBar" class="hidden">
+			              <div class="progress" style="height: 100%; width: 100%;">
+			                <div class="glimmer">
+			                </div>
+			              </div>
+			            </div>
+			          </div>
+				</div>
+
+				<menu type="context" id="viewerContextMenu">
+					<menuitem id="contextFirstPage" label="First Page" data-l10n-id="first_page" title="Go to First Page"></menuitem>
+					<menuitem id="contextLastPage" label="Last Page" data-l10n-id="last_page" title="Go to Last Page"></menuitem>
+					<menuitem id="contextPageRotateCw" label="Rotate Clockwise" data-l10n-id="page_rotate_cw" title="Rotate Clockwise"></menuitem>
+					<menuitem id="contextPageRotateCcw" label="Rotate Counter-Clockwise" data-l10n-id="page_rotate_ccw" title="Rotate Counterclockwise"></menuitem>
+				</menu>
+
+				<div id="viewerContainer" tabindex="0" style="background: #222;">
+					<div id="viewer" class="pdfViewer"><div class="page" data-page-number="1" data-loaded="true" style="width: 1019px; height: 1319px;"><div class="canvasWrapper" style="width: 1019px; height: 1319px;"><canvas id="page1" width="2040" height="2640" style="width: 1020px; height: 1320px;"></canvas></div><div class="textLayer" style="width: 1019px; height: 1319px;"><div style="left: 120px; top: 133.903px; font-size: 30.825px; font-family: sans-serif; transform: scaleX(0.97772);">WorldWide Bank Demo on CDP-DC 7.x</div><div style="left: 120px; top: 220.645px; font-size: 20px; font-family: sans-serif; transform: scaleX(1);">Summary</div><div style="left: 120px; top: 255.153px; font-size: 19.1625px; font-family: sans-serif; transform: scaleX(1.00047);">How to quickly setup HDP Security/Governance/GDPR (Worldwide Bank) demo using</div><div style="left: 120px; top: 281.403px; font-size: 19.1625px; font-family: sans-serif; transform: scaleX(1.00093);">Cloudera Data Platform Data Center 7.0 (CDP-DC 7.0). It can be deployed either on AWS</div><div style="left: 120px; top: 307.653px; font-size: 19.1625px; font-family: sans-serif; transform: scaleX(1.00001);">using AMI or on your own setup via provided script</div><div style="left: 120px; top: 394.395px; font-size: 20px; font-family: sans-serif; transform: scaleX(1);">Recording</div><div style="left: 120px; top: 428.411px; font-size: 18.325px; font-family: sans-serif; transform: scaleX(1.00002);">Cloudera Connect Showcase - CDP Demo on Security and Governance</div><div style="left: 120px; top: 501.895px; font-size: 20px; font-family: sans-serif; transform: scaleX(1);">What's included</div><div style="left: 178.74999999999997px; top: 536.4026978670653px; font-size: 19.162499874999998px; font-family: sans-serif;">●</div><div style="left: 208.75px; top: 536.403px; font-size: 19.1625px; font-family: sans-serif; transform: scaleX(1.00001);">Single node CDP 7.0.3 including:</div><div style="left: 209.99999999999997px; top: 563.4108644841308px; font-size: 18.324999749999996px; font-family: sans-serif;">○</div><div style="left: 240px; top: 562.653px; font-size: 19.1625px; font-family: sans-serif; transform: scaleX(1.00001);">Cloudera Manager (60 day trial license included) - for managing the services</div><div style="left: 209.99999999999997px; top: 589.6608644841308px; font-size: 18.324999749999996px; font-family: sans-serif;">○</div><div style="left: 240px; top: 588.903px; font-size: 19.1625px; font-family: sans-serif; transform: scaleX(1.00001);">Kerberos - for authentication (via local MIT KDC)</div><div style="left: 209.99999999999997px; top: 615.9108644841308px; font-size: 18.324999749999996px; font-family: sans-serif;">○</div><div style="left: 240px; top: 615.153px; font-size: 19.1625px; font-family: sans-serif; transform: scaleX(1.00001);">Ranger - for authorization (via both resource/tag based policies for access</div><div style="left: 240px; top: 641.403px; font-size: 19.1625px; font-family: sans-serif; transform: scaleX(1.00002);">and masking)</div><div style="left: 209.99999999999997px; top: 668.4108644841307px; font-size: 18.324999749999996px; font-family: sans-serif;">○</div><div style="left: 240px; top: 667.653px; font-size: 19.1625px; font-family: sans-serif; transform: scaleX(1.00001);">Atlas - for governance (classification/lineage/search)</div><div style="left: 209.99999999999997px; top: 694.6608644841307px; font-size: 18.324999749999996px; font-family: sans-serif;">○</div><div style="left: 240px; top: 693.903px; font-size: 19.1625px; font-family: sans-serif; transform: scaleX(1.00001);">Zeppelin - for running/visualizing Hive queries</div><div style="left: 209.99999999999997px; top: 720.1526978670652px; font-size: 19.162499874999998px; font-family: sans-serif;">○</div><div style="left: 240px; top: 720.153px; font-size: 19.1625px; font-family: sans-serif; transform: scaleX(1.00001);">Impala/Hive 3 - for Sql access and ACID capabilities</div><div style="left: 209.99999999999997px; top: 746.4026978670652px; font-size: 19.162499874999998px; font-family: sans-serif;">○</div><div style="left: 240px; top: 746.403px; font-size: 19.1625px; font-family: sans-serif; transform: scaleX(1.00116);">Spark/HiveWarehouseConnector - for running secure SparkSQL queries</div><div style="left: 178.74999999999997px; top: 798.9026978670652px; font-size: 19.162499874999998px; font-family: sans-serif;">●</div><div style="left: 208.75px; top: 798.903px; font-size: 19.1625px; font-family: sans-serif; transform: scaleX(1.00162);">Worldwide Bank artifacts</div><div style="left: 208.74999999999997px; top: 825.1526978670652px; font-size: 19.162499874999998px; font-family: sans-serif;">○</div><div style="left: 238.75px; top: 825.153px; font-size: 19.1625px; font-family: sans-serif; transform: scaleX(1.00002);">Demo hive tables</div><div style="left: 208.74999999999997px; top: 851.4026978670652px; font-size: 19.162499874999998px; font-family: sans-serif;">○</div><div style="left: 238.75px; top: 851.403px; font-size: 19.1625px; font-family: sans-serif; transform: scaleX(1.00001);">Demo tags/attributes and lineage in Atlas</div><div style="left: 208.74999999999997px; top: 877.6526978670652px; font-size: 19.162499874999998px; font-family: sans-serif;">○</div><div style="left: 238.75px; top: 877.653px; font-size: 19.1625px; font-family: sans-serif; transform: scaleX(1.00001);">Demo Zeppelin notebooks to walk through demo scenario</div><div style="left: 208.74999999999997px; top: 903.9026978670652px; font-size: 19.162499874999998px; font-family: sans-serif;">○</div><div style="left: 238.75px; top: 903.903px; font-size: 19.1625px; font-family: sans-serif; transform: scaleX(1.00001);">Ranger policies across HDFS, Hive/Impala, Hbase, Kafka, SparkSQL to</div><div style="left: 238.75px; top: 930.153px; font-size: 19.1625px; font-family: sans-serif; transform: scaleX(1.00002);">showcase:</div><div style="left: 270px; top: 956.4026978670652px; font-size: 19.162499874999998px; font-family: sans-serif;">■</div><div style="left: 300px; top: 956.403px; font-size: 19.1625px; font-family: sans-serif; transform: scaleX(1.00568);">Tag based policies across HDP components</div><div style="left: 270px; top: 986.4026978670652px; font-size: 19.162499874999998px; font-family: sans-serif;">■</div><div style="left: 300px; top: 986.403px; font-size: 19.1625px; font-family: sans-serif; transform: scaleX(1.00001);">Row level security in Hive columns</div><div style="left: 270px; top: 1016.4026978670652px; font-size: 19.162499874999998px; font-family: sans-serif;">■</div><div style="left: 300px; top: 1016.4px; font-size: 19.1625px; font-family: sans-serif; transform: scaleX(1.00001);">Dynamic tag based masking in Hive columns</div><div style="left: 270px; top: 1046.4026978670652px; font-size: 19.162499874999998px; font-family: sans-serif;">■</div><div style="left: 300px; top: 1046.4px; font-size: 19.1625px; font-family: sans-serif; transform: scaleX(1.00001);">Hive UDF execution authorization</div><div style="left: 270px; top: 1076.4026978670652px; font-size: 19.162499874999998px; font-family: sans-serif;">■</div><div style="left: 300px; top: 1076.4px; font-size: 19.1625px; font-family: sans-serif; transform: scaleX(1.00002);">Atlas capabilities like</div><div style="left: 329.99999999999994px; top: 1106.4026978670652px; font-size: 19.162499874999998px; font-family: sans-serif;">●</div><div style="left: 360px; top: 1106.4px; font-size: 19.1625px; font-family: sans-serif; transform: scaleX(1.00001);">Classifications (tags) and attributes</div><div style="left: 329.99999999999994px; top: 1136.4026978670652px; font-size: 19.162499874999998px; font-family: sans-serif;">●</div><div style="left: 360px; top: 1136.4px; font-size: 19.1625px; font-family: sans-serif; transform: scaleX(1.01547);">Tag propagation</div><div style="left: 329.99999999999994px; top: 1166.4026978670652px; font-size: 19.162499874999998px; font-family: sans-serif;">●</div><div style="left: 360px; top: 1166.4px; font-size: 19.1625px; font-family: sans-serif; transform: scaleX(1.00002);">Data lineage</div><div class="endOfContent"></div></div><div class="annotationLayer"><section data-annotation-id="161R" class="linkAnnotation" style="transform: matrix(1.66667, 0, 0, 1.66667, 0, 0); transform-origin: -72px -258px; left: 72px; top: 258px; width: 350.25px; height: 12px;"><a title="https://mindtickle.app.link/TZynd1Z383" href="https://mindtickle.app.link/TZynd1Z383" target="" rel="noopener noreferrer nofollow"></a></section></div></div><div class="page" data-page-number="2" data-loaded="true" style="width: 1019px; height: 1319px;"><div class="canvasWrapper" style="width: 1019px; height: 1319px;"><canvas id="page2" width="2040" height="2640" style="width: 1020px; height: 1320px;"></canvas></div><div class="textLayer" style="width: 1019px; height: 1319px;"><div style="left: 329.99999999999994px; top: 121.4026978670652px; font-size: 19.162499874999998px; font-family: sans-serif;">●</div><div style="left: 360px; top: 121.403px; font-size: 19.1625px; font-family: sans-serif; transform: scaleX(1.00001);">Business glossary:categories and terms</div><div style="left: 270px; top: 151.4026978670652px; font-size: 19.162499874999998px; font-family: sans-serif;">■</div><div style="left: 300px; top: 151.403px; font-size: 19.1625px; font-family: sans-serif; transform: scaleX(1.00001);">GDPR Scenarios around consent and data erasure via Hive ACID</div><div style="left: 209.99999999999997px; top: 181.4026978670652px; font-size: 19.162499874999998px; font-family: sans-serif;">○</div><div style="left: 240px; top: 181.403px; font-size: 19.1625px; font-family: sans-serif; transform: scaleX(1.00002);">Hive ACID / MERGE labs</div><div style="left: 120px; top: 746.895px; font-size: 20px; font-family: sans-serif; transform: scaleX(1);">Option 1: Steps to deploy on your own setup</div><div style="left: 150px; top: 805.9108644841307px; font-size: 18.324999749999996px; font-family: sans-serif;">●</div><div style="left: 180px; top: 805.911px; font-size: 18.325px; font-family: sans-serif; transform: scaleX(1.00002);">Launch a vanilla Centos 7 VM and set up a single node CDP cluster using this </div><div style="left: 818.5276px; top: 805.5708498403318px; font-size: 18.324999749999996px; font-family: monospace;">​</div><div style="left: 818.528px; top: 805.911px; font-size: 18.325px; font-family: sans-serif; transform: scaleX(1.00007);">Github</div><div style="left: 180px; top: 830.911px; font-size: 18.325px; font-family: sans-serif; transform: scaleX(1.00002);">but instead of "base" CM template choose the "wwbank_krb.json" template:</div><div style="left: 120px; top: 881.421px; font-size: 15px; font-family: sans-serif; transform: scaleX(1);">yum install -y git</div><div style="left: 120px; top: 902.671px; font-size: 15px; font-family: sans-serif; transform: scaleX(1);">#setup KDC</div><div style="left: 120px; top: 923.921px; font-size: 15px; font-family: sans-serif; transform: scaleX(1);">curl -sSL https://gist.github.com/abajwa-hw/bca3d23fe146c3ebd59a9b5fd19480a3/raw | sudo -E sh</div><div style="left: 120px; top: 966.421px; font-size: 15px; font-family: sans-serif; transform: scaleX(1.00188);">git clone https://github.com/fabiog1901/SingleNodeCDPCluster.git</div><div style="left: 120px; top: 987.671px; font-size: 15px; font-family: sans-serif; transform: scaleX(1);">cd SingleNodeCDPCluster</div><div style="left: 120px; top: 1008.92px; font-size: 15px; font-family: sans-serif; transform: scaleX(1);">./setup_krb.sh gcp templates/wwbank_krb.json</div><div style="left: 120px; top: 1051.42px; font-size: 15px; font-family: sans-serif; transform: scaleX(1);">#Setup worldwide bank demo using </div><div style="left: 360.98145px; top: 1051.1425781249998px; font-size: 14.999999999999998px; font-family: monospace;">​</div><div style="left: 360.981px; top: 1051.42px; font-size: 15px; font-family: sans-serif; transform: scaleX(1);">script</div><div style="left: 120px; top: 1072.67px; font-size: 15px; font-family: sans-serif; transform: scaleX(1.00108);">curl -sSL https://raw.githubusercontent.com/abajwa-hw/masterclass/master/ranger-atlas/setup-dc-703.sh | sudo -E</div><div style="left: 120px; top: 1093.92px; font-size: 15px; font-family: sans-serif; transform: scaleX(1);">bash</div><div class="endOfContent"></div></div><div class="annotationLayer"><section data-annotation-id="164R" class="linkAnnotation" style="transform: matrix(1.66667, 0, 0, 1.66667, 0, 0); transform-origin: -491.25px -484.5px; left: 491.25px; top: 484.5px; width: 32.25px; height: 12px;"><a title="https://github.com/fabiog1901/SingleNodeCDPCluster" href="https://github.com/fabiog1901/SingleNodeCDPCluster" target="" rel="noopener noreferrer nofollow"></a></section><section data-annotation-id="165R" class="linkAnnotation" style="transform: matrix(1.66667, 0, 0, 1.66667, 0, 0); transform-origin: -216.75px -630.75px; left: 216.75px; top: 630.75px; width: 21px; height: 11.25px;"><a title="https://github.com/abajwa-hw/masterclass/blob/master/ranger-atlas/setup-dc-703.sh" href="https://github.com/abajwa-hw/masterclass/blob/master/ranger-atlas/setup-dc-703.sh" target="" rel="noopener noreferrer nofollow"></a></section></div></div><div class="page" data-page-number="3" style="width: 1019px; height: 1319px;"><div class="loadingIcon"></div></div><div class="page" data-page-number="4" style="width: 1019px; height: 1319px;"><div class="loadingIcon"></div></div><div class="page" data-page-number="5" style="width: 1019px; height: 1319px;"><div class="loadingIcon"></div></div><div class="page" data-page-number="6" style="width: 1019px; height: 1319px;"><div class="loadingIcon"></div></div><div class="page" data-page-number="7" style="width: 1019px; height: 1319px;"><div class="loadingIcon"></div></div><div class="page" data-page-number="8" style="width: 1019px; height: 1319px;"><div class="loadingIcon"></div></div><div class="page" data-page-number="9" style="width: 1019px; height: 1319px;"><div class="loadingIcon"></div></div><div class="page" data-page-number="10" style="width: 1019px; height: 1319px;"><div class="loadingIcon"></div></div><div class="page" data-page-number="11" style="width: 1019px; height: 1319px;"><div class="loadingIcon"></div></div><div class="page" data-page-number="12" style="width: 1019px; height: 1319px;"><div class="loadingIcon"></div></div><div class="page" data-page-number="13" style="width: 1019px; height: 1319px;"><div class="loadingIcon"></div></div><div class="page" data-page-number="14" style="width: 1019px; height: 1319px;"><div class="loadingIcon"></div></div><div class="page" data-page-number="15" style="width: 1019px; height: 1319px;"><div class="loadingIcon"></div></div><div class="page" data-page-number="16" style="width: 1019px; height: 1319px;"><div class="loadingIcon"></div></div><div class="page" data-page-number="17" style="width: 1019px; height: 1319px;"><div class="loadingIcon"></div></div><div class="page" data-page-number="18" style="width: 1019px; height: 1319px;"><div class="loadingIcon"></div></div><div class="page" data-page-number="19" style="width: 1019px; height: 1319px;"><div class="loadingIcon"></div></div><div class="page" data-page-number="20" style="width: 1019px; height: 1319px;"><div class="loadingIcon"></div></div><div class="page" data-page-number="21" style="width: 1019px; height: 1319px;"><div class="loadingIcon"></div></div><div class="page" data-page-number="22" style="width: 1019px; height: 1319px;"><div class="loadingIcon"></div></div><div class="page" data-page-number="23" style="width: 1019px; height: 1319px;"><div class="loadingIcon"></div></div><div class="page" data-page-number="24" style="width: 1019px; height: 1319px;"><div class="loadingIcon"></div></div><div class="page" data-page-number="25" style="width: 1019px; height: 1319px;"><div class="loadingIcon"></div></div><div class="page" data-page-number="26" style="width: 1019px; height: 1319px;"><div class="loadingIcon"></div></div><div class="page" data-page-number="27" style="width: 1019px; height: 1319px;"><div class="loadingIcon"></div></div><div class="page" data-page-number="28" style="width: 1019px; height: 1319px;"><div class="loadingIcon"></div></div><div class="page" data-page-number="29" style="width: 1019px; height: 1319px;"><div class="loadingIcon"></div></div><div class="page" data-page-number="30" style="width: 1019px; height: 1319px;"><div class="loadingIcon"></div></div><div class="page" data-page-number="31" style="width: 1019px; height: 1319px;"><div class="loadingIcon"></div></div><div class="page" data-page-number="32" style="width: 1019px; height: 1319px;"><div class="loadingIcon"></div></div><div class="page" data-page-number="33" style="width: 1019px; height: 1319px;"><div class="loadingIcon"></div></div><div class="page" data-page-number="34" style="width: 1019px; height: 1319px;"><div class="loadingIcon"></div></div><div class="page" data-page-number="35" style="width: 1019px; height: 1319px;"><div class="loadingIcon"></div></div><div class="page" data-page-number="36" style="width: 1019px; height: 1319px;"><div class="loadingIcon"></div></div><div class="page" data-page-number="37" style="width: 1019px; height: 1319px;"><div class="loadingIcon"></div></div></div>
+				</div>
+
+				<div id="errorWrapper" hidden="true">
+		          <div id="errorMessageLeft">
+		            <span id="errorMessage"></span>
+		            <button id="errorShowMore" data-l10n-id="error_more_info">More Information</button>
+		            <button id="errorShowLess" data-l10n-id="error_less_info" hidden="true">Less Information</button>
+		          </div>
+		          <div id="errorMessageRight">
+		            <button id="errorClose" data-l10n-id="error_close">Close</button>
+		          </div>
+		          <div class="clearBoth"></div>
+		          <textarea id="errorMoreInfo" hidden="true" readonly="readonly"></textarea>
+		        </div>
+			</div> <!-- mainContainer -->
+
+			<div id="overlayContainer" class="hidden">
+		        <div id="passwordOverlay" class="container hidden">
+		          <div class="dialog">
+		            <div class="row">
+		              <p id="passwordText" data-l10n-id="password_label">Enter the password to open this PDF file.</p>
+		            </div>
+		            <div class="row">
+		              <input type="password" id="password" class="toolbarField">
+		            </div>
+		            <div class="buttonRow">
+		              <button id="passwordCancel" class="overlayButton"><span data-l10n-id="password_cancel">Cancel</span></button>
+		              <button id="passwordSubmit" class="overlayButton"><span data-l10n-id="password_ok">OK</span></button>
+		            </div>
+		          </div>
+		        </div>
+		        <div id="documentPropertiesOverlay" class="container hidden">
+		          <div class="dialog">
+		            <div class="row">
+		              <span data-l10n-id="document_properties_file_name">File name:</span> <p id="fileNameField">-</p>
+		            </div>
+		            <div class="row">
+		              <span data-l10n-id="document_properties_file_size">File size:</span> <p id="fileSizeField">-</p>
+		            </div>
+		            <div class="separator"></div>
+		            <div class="row">
+		              <span data-l10n-id="document_properties_title">Title:</span> <p id="titleField">-</p>
+		            </div>
+		            <div class="row">
+		              <span data-l10n-id="document_properties_author">Author:</span> <p id="authorField">-</p>
+		            </div>
+		            <div class="row">
+		              <span data-l10n-id="document_properties_subject">Subject:</span> <p id="subjectField">-</p>
+		            </div>
+		            <div class="row">
+		              <span data-l10n-id="document_properties_keywords">Keywords:</span> <p id="keywordsField">-</p>
+		            </div>
+		            <div class="row">
+		              <span data-l10n-id="document_properties_creation_date">Creation Date:</span> <p id="creationDateField">-</p>
+		            </div>
+		            <div class="row">
+		              <span data-l10n-id="document_properties_modification_date">Modification Date:</span> <p id="modificationDateField">-</p>
+		            </div>
+		            <div class="row">
+		              <span data-l10n-id="document_properties_creator">Creator:</span> <p id="creatorField">-</p>
+		            </div>
+		            <div class="separator"></div>
+		            <div class="row">
+		              <span data-l10n-id="document_properties_producer">PDF Producer:</span> <p id="producerField">-</p>
+		            </div>
+		            <div class="row">
+		              <span data-l10n-id="document_properties_version">PDF Version:</span> <p id="versionField">-</p>
+		            </div>
+		            <div class="row">
+		              <span data-l10n-id="document_properties_page_count">Page Count:</span> <p id="pageCountField">-</p>
+		            </div>
+		            <div class="row">
+		              <span data-l10n-id="document_properties_page_size">Page Size:</span> <p id="pageSizeField">-</p>
+		            </div>
+		            <div class="buttonRow">
+		              <button id="documentPropertiesClose" class="overlayButton"><span data-l10n-id="document_properties_close">Close</span></button>
+		            </div>
+		          </div>
+		        </div>
+		        <div id="printServiceOverlay" class="container hidden">
+		          <div class="dialog">
+		            <div class="row">
+		              <span data-l10n-id="print_progress_message">Preparing document for printing…</span>
+		            </div>
+		            <div class="row">
+		              <progress value="0" max="100"></progress>
+		              <span data-l10n-id="print_progress_percent" data-l10n-args="{ &quot;progress&quot;: 0 }" class="relative-progress">0%</span>
+		            </div>
+		            <div class="buttonRow">
+		              <button id="printCancel" class="overlayButton"><span data-l10n-id="print_progress_close">Cancel</span></button>
+		            </div>
+		          </div>
+		        </div>
+		      </div>  <!-- overlayContainer -->
+
+		</div> <!-- outerContainer -->
+		<div id="printContainer"></div>
+		<div id="mozPrintCallback-shim" hidden="">
+			<style>
+				@media print {
+					#printContainer div {
+						page-break-after: always;
+						page-break-inside: avoid;
+					}
+				}
+			</style>
+			<style scoped="">
+				#mozPrintCallback-shim {
+					position: fixed;
+					top: 0;
+					left: 0;
+					height: 100%;
+					width: 100%;
+					z-index: 9999999;
+
+					display: block;
+					text-align: center;
+					background-color: rgba(0, 0, 0, 0.5);
+				}
+				#mozPrintCallback-shim[hidden] {
+					display: none;
+				}
+				@media print {
+					#mozPrintCallback-shim {
+						display: none;
+					}
+				}
+
+				#mozPrintCallback-shim .mozPrintCallback-dialog-box {
+					display: inline-block;
+					margin: -50px auto 0;
+					position: relative;
+					top: 45%;
+					left: 0;
+					min-width: 220px;
+					max-width: 400px;
+
+					padding: 9px;
+
+					border: 1px solid hsla(0, 0%, 0%, .5);
+					border-radius: 2px;
+					box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3);
+
+					background-color: #474747;
+
+					color: hsl(0, 0%, 85%);
+					font-size: 16px;
+					line-height: 20px;
+				}
+				#mozPrintCallback-shim .progress-row {
+					clear: both;
+					padding: 1em 0;
+				}
+				#mozPrintCallback-shim progress {
+					width: 100%;
+				}
+				#mozPrintCallback-shim .relative-progress {
+					clear: both;
+					float: right;
+				}
+				#mozPrintCallback-shim .progress-actions {
+					clear: both;
+				}
+			</style>
+			<div class="mozPrintCallback-dialog-box">
+				<!-- TODO: Localise the following strings -->
+				Preparing document for printing...
+				<div class="progress-row">
+					<progress value="0" max="100"></progress>
+					<span class="relative-progress">0%</span>
+				</div>
+				<div class="progress-actions">
+					<input type="button" value="Cancel" class="mozPrintCallback-cancel">
+				</div>
+			</div>
+		</div>
+
+	</div>
+
+	<div class="sliderFooter pos_rel" style="bottom:62px;">
+		<!--div class="pos_abs mtIcon" style="top:9px;left:8px;"></div-->
+		<div class="">
+			<div class="pos_rel floatL" style="left:50%">
+				<div class="pos_rel floatL" style="left:-50%;background:#444;padding:0 17px;height:48px;border-radius:5px">
+					<!--div class="floatL marginR15 marginT10 slidebtn tiny_slideBack"></div-->
+					<div class="floatL marginT16">
+						<div class="floatL zoomInIcon_15_15 marginR30 zoom-in"></div>
+						<div class="floatL zoomOutIcon_15_15 marginR30 zoom-out"></div>
+						<div class="clear"></div>
+					</div>
+					<div class="floatL prvBtn marginT16" style="opacity: 0.4;"></div>
+					<div class="floatL upBtn marginT18 display_N"></div>
+					<div class="floatL lineHeight20 F13 colorcc marginR30 marginT14" style="display: inline-flex;">
+						<input readonly="readonly" name="currentPage" type="text" id="currentPage" style="line-height: 20px;height: 20px;width: 35px;border: 0;background: transparent;color: #ccc;font-size: 13px;margin: 0;padding: 0;text-align: right;outline: none;" class="" value="1">
+						<span class="marginL3" id="totalPage">/ 37</span>
+					</div>
+					<div class="floatL nextBtn marginT16" style="opacity: 1;"></div>
+					<div class="floatL downBtn marginT18 display_N"></div>
+					<!--div class="floatL marginT10 slidebtn tiny_slideForward"></div-->
+					<!--div class="floatL fullSize_Icon fullScreenBtn marginT17 marginL30"></div-->
+					<div class="clear"></div>
+				</div>
+			</div>
+			<div class="clear"></div>
+		</div>
+		<!--div class="pos_abs" style="right:15px;top:8px;">
+            <input name="currentPage" type="text" id="currentPage" style="line-height:16px;height:16px;width:25px" class="floatL lineHeight20 color36_F12 textBg" value="1">
+            <div id="totalPage" class="floatL marginL3 lineHeight20 colorff_F14">/</div>
+            <div class="viewFullScreen floatL marginL10" style="visibility:hidden;"></div>
+            <div class="clear"></div>
+        </div-->
+	</div>
+</div>
+
+<script type="text/javascript">var pdf_url = "https://cf-us1-mtdocs-box-processed.mindtickle.com/1232801716776842772/doc.pdf?Policy=eyJTdGF0ZW1lbnQiOiBbeyJSZXNvdXJjZSI6Imh0dHBzOi8vY2YtdXMxLW10ZG9jcy1ib3gtcHJvY2Vzc2VkLm1pbmR0aWNrbGUuY29tLzEyMzI4MDE3MTY3NzY4NDI3NzIvKiIsIkNvbmRpdGlvbiI6eyJEYXRlTGVzc1RoYW4iOnsiQVdTOkVwb2NoVGltZSI6MTU5MTg1NzQ2MX0sIklwQWRkcmVzcyI6eyJBV1M6U291cmNlSXAiOiIwLjAuMC4wLzAifSwiRGF0ZUdyZWF0ZXJUaGFuIjp7IkFXUzpFcG9jaFRpbWUiOjE0NDQ5NzcxMTZ9fX1dfQ__&Signature=bWpNO0xZhTuO97Bfd4GaZbXNZ7Ta98pxCYAghG7wvnsCJG~mR0HTDnL3bLMSDKc4wvvYp4uj~5HGluUPCK7MBU5E2IcNBRBNG87wXWYOALuxKx9ByAofvM7DKRd92tn~Rw~B6w02Pg5wBcwE048vCPoDgy91cuddMqGGcm7rHT8_&Key-Pair-Id=APKAJRHSQBGT5CW7P2CA";</script>
+<script type="text/javascript" src="./mt-2.9.0.js"></script>
+
+
+
+
+<script type="text/javascript">
+    $(function() {
+        if(location.search.split("dontshowbignavigation").length > 1){
+            document.getElementsByClassName('bignavigation')[0].style.display = "none";
+            document.getElementsByClassName('sliderFooter')[0].style.display = "none";
+        }
+	});    
+		
+</script>
+<script type="text/javascript">
+
+	console.log("URL & PDF passed: ","https://cf-us1-mtdocs-box-processed.mindtickle.com/1232801716776842772/doc.pdf?Policy=eyJTdGF0ZW1lbnQiOiBbeyJSZXNvdXJjZSI6Imh0dHBzOi8vY2YtdXMxLW10ZG9jcy1ib3gtcHJvY2Vzc2VkLm1pbmR0aWNrbGUuY29tLzEyMzI4MDE3MTY3NzY4NDI3NzIvKiIsIkNvbmRpdGlvbiI6eyJEYXRlTGVzc1RoYW4iOnsiQVdTOkVwb2NoVGltZSI6MTU5MTg1NzQ2MX0sIklwQWRkcmVzcyI6eyJBV1M6U291cmNlSXAiOiIwLjAuMC4wLzAifSwiRGF0ZUdyZWF0ZXJUaGFuIjp7IkFXUzpFcG9jaFRpbWUiOjE0NDQ5NzcxMTZ9fX1dfQ__&Signature=bWpNO0xZhTuO97Bfd4GaZbXNZ7Ta98pxCYAghG7wvnsCJG~mR0HTDnL3bLMSDKc4wvvYp4uj~5HGluUPCK7MBU5E2IcNBRBNG87wXWYOALuxKx9ByAofvM7DKRd92tn~Rw~B6w02Pg5wBcwE048vCPoDgy91cuddMqGGcm7rHT8_&Key-Pair-Id=APKAJRHSQBGT5CW7P2CA");
+</script>
+
+
+<input id="fileInput" class="fileInput" type="file"></body></html>
