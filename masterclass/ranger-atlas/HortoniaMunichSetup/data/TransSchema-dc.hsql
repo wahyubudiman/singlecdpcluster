@@ -1,0 +1,138 @@
+
+CREATE TABLE IF NOT EXISTS consent_master.consent_data_trans(
+                                    Country              		STRING
+                                  , CountryFull          		STRING
+                                  , InsuranceID          		INT
+                                  , MarketingConsent     		STRING
+                                  , MarketingConsentStartDate   DATE
+                                  , LoyaltyConsent     			STRING
+                                  , LoyaltyConsentStartDate   	DATE
+                                  , ThirdPartyConsent     		STRING
+                                  , ThirdPartyConsentStartDate  DATE
+                                ) 
+                                   CLUSTERED BY(Country) INTO 3 BUCKETS   
+                                  STORED AS ORC
+                                  LOCATION '/warehouse/tablespace/managed/hive/hive_data/consent-trans'
+                                  TBLPROPERTIES ('transactional'='true');
+
+insert into consent_master.consent_data_trans select * from consent_master.consent_data;
+
+
+
+CREATE TABLE IF NOT EXISTS worldwidebank.ww_customers_trans(
+                                    Gender               STRING
+                                  , Title                STRING
+                                  , GivenName            STRING
+                                  , MiddleInitial        STRING
+                                  , Surname              STRING
+                                  , Number               INT
+                                  , NameSet              STRING
+                                  , StreetAddress        STRING
+                                  , City                 STRING
+                                  , State                STRING
+                                  , StateFull            STRING
+                                  , ZipCode              STRING
+                                  , Country              STRING
+                                  , CountryFull          STRING
+                                  , EmailAddress         STRING
+                                  , Username             STRING
+                                  , Password             STRING
+                                  , TelephoneNumber      STRING
+                                  , TelephoneCountryCode INT
+                                  , MothersMaiden        STRING
+                                  , Birthday             STRING
+                                  , Age                  INT
+                                  , TropicalZodiac       STRING
+                                  , CCType               STRING
+                                  , CCNumber             STRING
+                                  , CVV2                 STRING
+                                  , CCExpires            STRING
+                                  , NationalID           STRING
+                                  , MRN                  STRING
+                                  , InsuranceID          STRING
+                                  , EyeColor             STRING
+                                  , Occupation           STRING
+                                  , Company              STRING
+                                  , Vehicle              STRING
+                                  , Domain               STRING
+                                  , BloodType            STRING
+                                  , Weight               DOUBLE
+                                  , Height               INT
+                                  , Latitude             DOUBLE
+                                  , Longitude            DOUBLE
+                                )  CLUSTERED BY(Gender) INTO 2 BUCKETS   
+                                  STORED AS ORC
+                                  LOCATION '/warehouse/tablespace/managed/hive/hive_data/worldwidebank/ww_customers_trans'
+                                  TBLPROPERTIES ('transactional'='true');
+                                  
+insert into worldwidebank.ww_customers_trans select * from worldwidebank.ww_customers;                                
+                                
+CREATE  TABLE IF NOT EXISTS worldwidebank.us_customers_trans(
+                                    Number               STRING
+                                  , Gender               STRING
+                                  , Title                STRING
+                                  , GivenName            STRING
+                                  , MiddleInitial        STRING
+                                  , Surname              STRING
+                                  , StreetAddress        STRING
+                                  , City                 STRING
+                                  , State                STRING
+                                  , StateFull            STRING
+                                  , ZipCode              STRING
+                                  , Country              STRING
+                                  , CountryFull          STRING
+                                  , EmailAddress         STRING
+                                  , Username             STRING
+                                  , Password             STRING
+                                  , TelephoneNumber      STRING
+                                  , TelephoneCountryCode STRING
+                                  , MothersMaiden        STRING
+                                  , Birthday             STRING
+                                  , Age                  INT
+                                  , TropicalZodiac       STRING
+                                  , CCType               STRING
+                                  , CCNumber             STRING
+                                  , CVV2                 STRING
+                                  , CCExpires            STRING
+                                  , NationalID           STRING
+                                  , MRN                  STRING
+                                  , InsuranceID          STRING
+                                  , EyeColor             STRING
+                                  , Occupation           STRING
+                                  , Company              STRING
+                                  , Vehicle              STRING
+                                  , Domain               STRING
+                                  , BloodType            STRING
+                                  , Weight               DOUBLE
+                                  , Height               INT
+                                  , Latitude             DOUBLE
+                                  , Longitude            DOUBLE
+                                 )  CLUSTERED BY(Gender) INTO 2 BUCKETS   
+                                  STORED AS ORC
+                                  LOCATION '/warehouse/tablespace/managed/hive/hive_data/worldwidebank/us_customers_trans'
+                                  TBLPROPERTIES ('transactional'='true');
+                                 
+insert into worldwidebank.us_customers_trans select * from worldwidebank.us_customers;                                
+                                 
+
+CREATE DATABASE      erasure_master   LOCATION '/warehouse/tablespace/managed/hive/hive_data/rtbf';   
+
+CREATE TABLE IF NOT EXISTS erasure_master.data_erasure_trans(
+                                    Country              		STRING
+                                  , CountryFull          		STRING
+                                  , InsuranceID          		INT
+                                  , RTBFRequested     			STRING
+                                  , RequestDate   				DATE
+                                  , ErasureOverride     		STRING
+                                ) CLUSTERED BY(Country) INTO 2 BUCKETS   
+                                  STORED AS ORC
+                                  LOCATION '/warehouse/tablespace/managed/hive/hive_data/rtbf_trans'
+                                  TBLPROPERTIES ('transactional'='true');
+                                 
+                                
+insert into erasure_master.data_erasure_trans select Country, CountryFull, InsuranceID, MarketingConsent, MarketingConsentStartDate, LoyaltyConsent from consent_master.consent_data limit 500;                                                                
+
+-- analyze table consent_master.consent_data_trans compute statistics for columns;
+-- analyze table worldwidebank.ww_customers_trans compute statistics for columns;
+-- analyze table worldwidebank.us_customers_trans compute statistics for columns;
+-- analyze table erasure_master.data_erasure_trans compute statistics for columns;

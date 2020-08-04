@@ -1,0 +1,547 @@
+{
+    "accessTypes": [
+        {
+            "impliedGrants": [],
+            "itemId": 1,
+            "label": "select",
+            "name": "select"
+        },
+        {
+            "impliedGrants": [],
+            "itemId": 2,
+            "label": "update",
+            "name": "update"
+        },
+        {
+            "impliedGrants": [],
+            "itemId": 3,
+            "label": "Create",
+            "name": "create"
+        },
+        {
+            "impliedGrants": [],
+            "itemId": 4,
+            "label": "Drop",
+            "name": "drop"
+        },
+        {
+            "impliedGrants": [],
+            "itemId": 5,
+            "label": "Alter",
+            "name": "alter"
+        },
+        {
+            "impliedGrants": [],
+            "itemId": 6,
+            "label": "Index",
+            "name": "index"
+        },
+        {
+            "impliedGrants": [],
+            "itemId": 7,
+            "label": "Lock",
+            "name": "lock"
+        },
+        {
+            "impliedGrants": [
+                "select",
+                "update",
+                "create",
+                "drop",
+                "alter",
+                "index",
+                "lock",
+                "read",
+                "write",
+                "repladmin",
+                "serviceadmin",
+                "refresh"
+            ],
+            "itemId": 8,
+            "label": "All",
+            "name": "all"
+        },
+        {
+            "impliedGrants": [],
+            "itemId": 9,
+            "label": "Read",
+            "name": "read"
+        },
+        {
+            "impliedGrants": [],
+            "itemId": 10,
+            "label": "Write",
+            "name": "write"
+        },
+        {
+            "impliedGrants": [],
+            "itemId": 11,
+            "label": "ReplAdmin",
+            "name": "repladmin"
+        },
+        {
+            "impliedGrants": [],
+            "itemId": 12,
+            "label": "Service Admin",
+            "name": "serviceadmin"
+        },
+        {
+            "impliedGrants": [],
+            "itemId": 13,
+            "label": "Temporary UDF Admin",
+            "name": "tempudfadmin"
+        },
+        {
+            "impliedGrants": [],
+            "itemId": 14,
+            "label": "Refresh",
+            "name": "refresh"
+        }
+    ],
+    "configs": [
+        {
+            "itemId": 1,
+            "label": "Username",
+            "mandatory": true,
+            "name": "username",
+            "type": "string",
+            "uiHint": "",
+            "validationMessage": "",
+            "validationRegEx": ""
+        },
+        {
+            "itemId": 2,
+            "label": "Password",
+            "mandatory": true,
+            "name": "password",
+            "type": "password",
+            "uiHint": "",
+            "validationMessage": "",
+            "validationRegEx": ""
+        },
+        {
+            "defaultValue": "org.apache.hive.jdbc.HiveDriver",
+            "itemId": 3,
+            "mandatory": true,
+            "name": "jdbc.driverClassName",
+            "type": "string",
+            "uiHint": "",
+            "validationMessage": "",
+            "validationRegEx": ""
+        },
+        {
+            "defaultValue": "",
+            "itemId": 4,
+            "mandatory": true,
+            "name": "jdbc.url",
+            "type": "string",
+            "uiHint": "{\"TextFieldWithIcon\":true, \"info\": \"1.For Remote Mode, eg.<br>jdbc:hive2://&lt;host&gt;:&lt;port&gt;<br>2.For Embedded Mode (no host or port), eg.<br>jdbc:hive2:///;initFile=&lt;file&gt;<br>3.For HTTP Mode, eg.<br>jdbc:hive2://&lt;host&gt;:&lt;port&gt;/;<br>transportMode=http;httpPath=&lt;httpPath&gt;<br>4.For SSL Mode, eg.<br>jdbc:hive2://&lt;host&gt;:&lt;port&gt;/;ssl=true;<br>sslTrustStore=tStore;trustStorePassword=pw<br>5.For ZooKeeper Mode, eg.<br>jdbc:hive2://&lt;host&gt;/;serviceDiscoveryMode=<br>zooKeeper;zooKeeperNamespace=hiveserver2<br>6.For Kerberos Mode, eg.<br>jdbc:hive2://&lt;host&gt;:&lt;port&gt;/;<br>principal=hive/domain@EXAMPLE.COM<br>\"}",
+            "validationMessage": "",
+            "validationRegEx": ""
+        },
+        {
+            "itemId": 5,
+            "label": "Common Name for Certificate",
+            "mandatory": false,
+            "name": "commonNameForCertificate",
+            "type": "string",
+            "uiHint": "",
+            "validationMessage": "",
+            "validationRegEx": ""
+        }
+    ],
+    "contextEnrichers": [],
+    "createTime": 1564812675823,
+    "dataMaskDef": {
+        "accessTypes": [
+            {
+                "impliedGrants": [],
+                "itemId": 1,
+                "label": "select",
+                "name": "select"
+            }
+        ],
+        "maskTypes": [
+            {
+                "dataMaskOptions": {},
+                "description": "Replace lowercase with 'x', uppercase with 'X', digits with '0'",
+                "itemId": 1,
+                "label": "Redact",
+                "name": "MASK",
+                "transformer": "mask({col})"
+            },
+            {
+                "dataMaskOptions": {},
+                "description": "Show last 4 characters; replace rest with 'x'",
+                "itemId": 2,
+                "label": "Partial mask: show last 4",
+                "name": "MASK_SHOW_LAST_4",
+                "transformer": "mask_show_last_n({col}, 4, 'x', 'x', 'x', -1, '1')"
+            },
+            {
+                "dataMaskOptions": {},
+                "description": "Show first 4 characters; replace rest with 'x'",
+                "itemId": 3,
+                "label": "Partial mask: show first 4",
+                "name": "MASK_SHOW_FIRST_4",
+                "transformer": "mask_show_first_n({col}, 4, 'x', 'x', 'x', -1, '1')"
+            },
+            {
+                "dataMaskOptions": {},
+                "description": "Hash the value",
+                "itemId": 4,
+                "label": "Hash",
+                "name": "MASK_HASH",
+                "transformer": "mask_hash({col})"
+            },
+            {
+                "dataMaskOptions": {},
+                "description": "Replace with NULL",
+                "itemId": 5,
+                "label": "Nullify",
+                "name": "MASK_NULL"
+            },
+            {
+                "dataMaskOptions": {},
+                "description": "No masking",
+                "itemId": 6,
+                "label": "Unmasked (retain original value)",
+                "name": "MASK_NONE"
+            },
+            {
+                "dataMaskOptions": {},
+                "description": "Date: show only year",
+                "itemId": 12,
+                "label": "Date: show only year",
+                "name": "MASK_DATE_SHOW_YEAR",
+                "transformer": "mask({col}, 'x', 'x', 'x', -1, '1', 1, 0, -1)"
+            },
+            {
+                "dataMaskOptions": {},
+                "description": "Custom",
+                "itemId": 13,
+                "label": "Custom",
+                "name": "CUSTOM"
+            }
+        ],
+        "resources": [
+            {
+                "accessTypeRestrictions": [],
+                "description": "Hive Database",
+                "excludesSupported": false,
+                "isValidLeaf": false,
+                "itemId": 1,
+                "label": "Hive Database",
+                "level": 10,
+                "lookupSupported": true,
+                "mandatory": true,
+                "matcher": "org.apache.ranger.plugin.resourcematcher.RangerDefaultResourceMatcher",
+                "matcherOptions": {
+                    "ignoreCase": "true",
+                    "wildCard": "false"
+                },
+                "name": "database",
+                "recursiveSupported": false,
+                "type": "string",
+                "uiHint": "{ \"singleValue\":true }",
+                "validationMessage": "",
+                "validationRegEx": ""
+            },
+            {
+                "accessTypeRestrictions": [],
+                "description": "Hive Table",
+                "excludesSupported": false,
+                "isValidLeaf": false,
+                "itemId": 2,
+                "label": "Hive Table",
+                "level": 20,
+                "lookupSupported": true,
+                "mandatory": true,
+                "matcher": "org.apache.ranger.plugin.resourcematcher.RangerDefaultResourceMatcher",
+                "matcherOptions": {
+                    "ignoreCase": "true",
+                    "wildCard": "false"
+                },
+                "name": "table",
+                "parent": "database",
+                "recursiveSupported": false,
+                "type": "string",
+                "uiHint": "{ \"singleValue\":true }",
+                "validationMessage": "",
+                "validationRegEx": ""
+            },
+            {
+                "accessTypeRestrictions": [],
+                "description": "Hive Column",
+                "excludesSupported": false,
+                "isValidLeaf": true,
+                "itemId": 4,
+                "label": "Hive Column",
+                "level": 30,
+                "lookupSupported": true,
+                "mandatory": true,
+                "matcher": "org.apache.ranger.plugin.resourcematcher.RangerDefaultResourceMatcher",
+                "matcherOptions": {
+                    "ignoreCase": "true",
+                    "wildCard": "false"
+                },
+                "name": "column",
+                "parent": "table",
+                "recursiveSupported": false,
+                "type": "string",
+                "uiHint": "{ \"singleValue\":true }",
+                "validationMessage": "",
+                "validationRegEx": ""
+            }
+        ]
+    },
+    "description": "Hive Server2",
+    "enums": [],
+    "guid": "3e1afb5a-184a-4e82-9d9c-87a5cacc243c",
+    "id": 3,
+    "implClass": "org.apache.ranger.services.hive.RangerServiceHive",
+    "isEnabled": true,
+    "label": "Hive Server2",
+    "name": "hive",
+    "options": {
+        "enableDenyAndExceptionsInPolicies": "true"
+    },
+    "policyConditions": [
+        {
+            "description": "Resources Accessed Together?",
+            "evaluator": "org.apache.ranger.plugin.conditionevaluator.RangerHiveResourcesAccessedTogetherCondition",
+            "evaluatorOptions": {},
+            "itemId": 1,
+            "label": "Resources Accessed Together?",
+            "name": "resources-accessed-together"
+        },
+        {
+            "description": "Accessed from outside of location?",
+            "evaluator": "org.apache.ranger.plugin.conditionevaluator.RangerContextAttributeValueNotInCondition",
+            "evaluatorOptions": {
+                "attributeName": "LOCATION_COUNTRY_CODE"
+            },
+            "itemId": 2,
+            "label": "Accessed from outside of location?",
+            "name": "location-outside"
+        }
+    ],
+    "resources": [
+        {
+            "accessTypeRestrictions": [],
+            "description": "Global",
+            "excludesSupported": false,
+            "isValidLeaf": true,
+            "itemId": 7,
+            "label": "Global",
+            "level": 10,
+            "lookupSupported": false,
+            "mandatory": true,
+            "matcher": "org.apache.ranger.plugin.resourcematcher.RangerDefaultResourceMatcher",
+            "matcherOptions": {
+                "ignoreCase": "false",
+                "wildCard": "true"
+            },
+            "name": "global",
+            "recursiveSupported": false,
+            "type": "string",
+            "uiHint": "",
+            "validationMessage": "",
+            "validationRegEx": ""
+        },
+        {
+            "accessTypeRestrictions": [],
+            "description": "URL",
+            "excludesSupported": false,
+            "isValidLeaf": true,
+            "itemId": 5,
+            "label": "URL",
+            "level": 10,
+            "lookupSupported": false,
+            "mandatory": true,
+            "matcher": "org.apache.ranger.plugin.resourcematcher.RangerURLResourceMatcher",
+            "matcherOptions": {
+                "ignoreCase": "false",
+                "wildCard": "true"
+            },
+            "name": "url",
+            "recursiveSupported": true,
+            "type": "string",
+            "uiHint": "",
+            "validationMessage": "",
+            "validationRegEx": ""
+        },
+        {
+            "accessTypeRestrictions": [],
+            "description": "Hive Service",
+            "excludesSupported": false,
+            "isValidLeaf": true,
+            "itemId": 6,
+            "label": "Hive Service",
+            "level": 10,
+            "lookupSupported": false,
+            "mandatory": true,
+            "matcher": "org.apache.ranger.plugin.resourcematcher.RangerDefaultResourceMatcher",
+            "matcherOptions": {
+                "ignoreCase": "false",
+                "wildCard": "true"
+            },
+            "name": "hiveservice",
+            "recursiveSupported": false,
+            "type": "string",
+            "uiHint": "",
+            "validationMessage": "",
+            "validationRegEx": ""
+        },
+        {
+            "accessTypeRestrictions": [],
+            "description": "Hive Database",
+            "excludesSupported": true,
+            "isValidLeaf": false,
+            "itemId": 1,
+            "label": "Hive Database",
+            "level": 10,
+            "lookupSupported": true,
+            "mandatory": true,
+            "matcher": "org.apache.ranger.plugin.resourcematcher.RangerDefaultResourceMatcher",
+            "matcherOptions": {
+                "ignoreCase": "true",
+                "wildCard": "true"
+            },
+            "name": "database",
+            "recursiveSupported": false,
+            "type": "string",
+            "uiHint": "",
+            "validationMessage": "",
+            "validationRegEx": ""
+        },
+        {
+            "accessTypeRestrictions": [],
+            "description": "Hive Table",
+            "excludesSupported": true,
+            "isValidLeaf": false,
+            "itemId": 2,
+            "label": "Hive Table",
+            "level": 20,
+            "lookupSupported": true,
+            "mandatory": true,
+            "matcher": "org.apache.ranger.plugin.resourcematcher.RangerDefaultResourceMatcher",
+            "matcherOptions": {
+                "ignoreCase": "true",
+                "wildCard": "true"
+            },
+            "name": "table",
+            "parent": "database",
+            "recursiveSupported": false,
+            "type": "string",
+            "uiHint": "",
+            "validationMessage": "",
+            "validationRegEx": ""
+        },
+        {
+            "accessTypeRestrictions": [],
+            "description": "Hive UDF",
+            "excludesSupported": true,
+            "isValidLeaf": true,
+            "itemId": 3,
+            "label": "Hive UDF",
+            "level": 20,
+            "lookupSupported": true,
+            "mandatory": true,
+            "matcher": "org.apache.ranger.plugin.resourcematcher.RangerDefaultResourceMatcher",
+            "matcherOptions": {
+                "ignoreCase": "true",
+                "wildCard": "true"
+            },
+            "name": "udf",
+            "parent": "database",
+            "recursiveSupported": false,
+            "type": "string",
+            "uiHint": "",
+            "validationMessage": "",
+            "validationRegEx": ""
+        },
+        {
+            "accessTypeRestrictions": [],
+            "description": "Hive Column",
+            "excludesSupported": true,
+            "isValidLeaf": true,
+            "itemId": 4,
+            "label": "Hive Column",
+            "level": 30,
+            "lookupSupported": true,
+            "mandatory": true,
+            "matcher": "org.apache.ranger.plugin.resourcematcher.RangerDefaultResourceMatcher",
+            "matcherOptions": {
+                "ignoreCase": "true",
+                "wildCard": "true"
+            },
+            "name": "column",
+            "parent": "table",
+            "recursiveSupported": false,
+            "type": "string",
+            "uiHint": "",
+            "validationMessage": "",
+            "validationRegEx": ""
+        }
+    ],
+    "rowFilterDef": {
+        "accessTypes": [
+            {
+                "impliedGrants": [],
+                "itemId": 1,
+                "label": "select",
+                "name": "select"
+            }
+        ],
+        "resources": [
+            {
+                "accessTypeRestrictions": [],
+                "description": "Hive Database",
+                "excludesSupported": false,
+                "isValidLeaf": false,
+                "itemId": 1,
+                "label": "Hive Database",
+                "level": 10,
+                "lookupSupported": true,
+                "mandatory": true,
+                "matcher": "org.apache.ranger.plugin.resourcematcher.RangerDefaultResourceMatcher",
+                "matcherOptions": {
+                    "ignoreCase": "true",
+                    "wildCard": "false"
+                },
+                "name": "database",
+                "recursiveSupported": false,
+                "type": "string",
+                "uiHint": "{ \"singleValue\":true }",
+                "validationMessage": "",
+                "validationRegEx": ""
+            },
+            {
+                "accessTypeRestrictions": [],
+                "description": "Hive Table",
+                "excludesSupported": false,
+                "isValidLeaf": true,
+                "itemId": 2,
+                "label": "Hive Table",
+                "level": 20,
+                "lookupSupported": true,
+                "mandatory": true,
+                "matcher": "org.apache.ranger.plugin.resourcematcher.RangerDefaultResourceMatcher",
+                "matcherOptions": {
+                    "ignoreCase": "true",
+                    "wildCard": "false"
+                },
+                "name": "table",
+                "parent": "database",
+                "recursiveSupported": false,
+                "type": "string",
+                "uiHint": "{ \"singleValue\":true }",
+                "validationMessage": "",
+                "validationRegEx": ""
+            }
+        ]
+    },
+    "updateTime": 1564812675824,
+    "version": 1
+}

@@ -1,0 +1,54 @@
+{
+   "name":"sh",
+   "group":"sh",
+   "properties":{
+      "zeppelin.shell.interpolation":{
+         "value":false,
+         "type":"checkbox",
+         "name":"zeppelin.shell.interpolation"
+      },
+      "zeppelin.shell.principal":{
+         "value":"",
+         "type":"string",
+         "name":"zeppelin.shell.principal"
+      },
+      "shell.working.directory.user.home":{
+         "value":false,
+         "type":"checkbox",
+         "name":"shell.working.directory.user.home"
+      },
+      "zeppelin.shell.auth.type":{
+         "value":"",
+         "type":"string",
+         "name":"zeppelin.shell.auth.type"
+      },
+      "zeppelin.shell.keytab.location":{
+         "value":"",
+         "type":"string",
+         "name":"zeppelin.shell.keytab.location"
+      },
+      "shell.command.timeout.millisecs":{
+         "value":"60000",
+         "type":"number",
+         "name":"shell.command.timeout.millisecs"
+      }
+   },
+   "dependencies":[
+
+   ],
+   "option":{
+      "remote":true,
+      "isExistingProcess":false,
+      "setPermission":false,
+      "session":false,
+      "process":false,
+      "perNote":"shared",
+      "perUser":"shared",
+      "owners":[
+
+      ]
+   },
+   "propertyValue":"",
+   "propertyKey":"",
+   "propertyType":"textarea"
+}

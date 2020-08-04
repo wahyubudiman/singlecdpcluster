@@ -1,0 +1,136 @@
+
+
+version: 1
+
+dn: dc=hadoop,dc=apache,dc=org
+objectclass: organization
+objectclass: dcObject
+o: Hadoop
+dc: hadoop
+
+dn: ou=people,dc=hadoop,dc=apache,dc=org
+objectclass:top
+objectclass:organizationalUnit
+ou: people
+
+dn: uid=demokitadmin,ou=people,dc=hadoop,dc=apache,dc=org
+objectclass:top
+objectclass:person
+objectclass:organizationalPerson
+objectclass:inetOrgPerson
+cn: demokitadmin
+sn: demokitadmin
+uid: demokitadmin
+userPassword:BadPass#1
+
+dn: uid=admin,ou=people,dc=hadoop,dc=apache,dc=org
+objectclass:top
+objectclass:person
+objectclass:organizationalPerson
+objectclass:inetOrgPerson
+cn: Admin
+sn: Admin
+uid: admin
+userPassword:BadPass#1
+
+dn: uid=joe_analyst,ou=people,dc=hadoop,dc=apache,dc=org
+objectclass:top
+objectclass:person
+objectclass:organizationalPerson
+objectclass:inetOrgPerson
+cn: joe_analyst
+sn: joe_analyst
+uid: joe_analyst
+userPassword:BadPass#1
+
+dn: uid=ivanna_eu_hr,ou=people,dc=hadoop,dc=apache,dc=org
+objectclass:top
+objectclass:person
+objectclass:organizationalPerson
+objectclass:inetOrgPerson
+cn: ivanna_eu_hr
+sn: ivanna_eu_hr
+uid: ivanna_eu_hr
+userPassword:BadPass#1
+
+dn: uid=etl_user,ou=people,dc=hadoop,dc=apache,dc=org
+objectclass:top
+objectclass:person
+objectclass:organizationalPerson
+objectclass:inetOrgPerson
+cn: etl_user
+sn: etl_user
+uid: etl_user
+userPassword:BadPass#1
+
+dn: uid=log_monitor,ou=people,dc=hadoop,dc=apache,dc=org
+objectclass:top
+objectclass:person
+objectclass:organizationalPerson
+objectclass:inetOrgPerson
+cn: log_monitor
+sn: log_monitor
+uid: log_monitor
+userPassword:BadPass#1
+
+dn: uid=scott_intern,ou=people,dc=hadoop,dc=apache,dc=org
+objectclass:top
+objectclass:person
+objectclass:organizationalPerson
+objectclass:inetOrgPerson
+cn: scott_intern
+sn: scott_intern
+uid: scott_intern
+userPassword:BadPass#1
+
+dn: ou=groups,dc=hadoop,dc=apache,dc=org
+objectclass:top
+objectclass:organizationalUnit
+ou: groups
+description: generic groups branch
+
+dn: cn=analyst,ou=groups,dc=hadoop,dc=apache,dc=org
+objectclass:top
+objectclass: groupofnames
+cn: analyst
+description:analyst  group
+member: uid=joe_analyst,ou=people,dc=hadoop,dc=apache,dc=org
+
+
+dn: cn=hr,ou=groups,dc=hadoop,dc=apache,dc=org
+objectclass:top
+objectclass: groupofnames
+cn: hr
+description: hr group
+member: uid=ivanna_eu_hr,ou=people,dc=hadoop,dc=apache,dc=org
+
+
+dn: cn=etl,ou=groups,dc=hadoop,dc=apache,dc=org
+objectclass:top
+objectclass: groupofnames
+cn: etl
+description: etl group
+member: uid=etl_user,ou=people,dc=hadoop,dc=apache,dc=org
+member: uid=log_monitor,ou=people,dc=hadoop,dc=apache,dc=org
+
+dn: cn=intern,ou=groups,dc=hadoop,dc=apache,dc=org
+objectclass:top
+objectclass: groupofnames
+cn: intern
+description: intern group
+member: uid=scott_intern,ou=people,dc=hadoop,dc=apache,dc=org
+
+dn: cn=us_employee,ou=groups,dc=hadoop,dc=apache,dc=org
+objectclass:top
+objectclass: groupofnames
+cn: us_employee
+description: us_employee group
+member: uid=joe_analyst,ou=people,dc=hadoop,dc=apache,dc=org
+
+
+dn: cn=eu_employee,ou=groups,dc=hadoop,dc=apache,dc=org
+objectclass:top
+objectclass: groupofnames
+cn: eu_employee
+description: eu_employee group
+member: uid=ivanna_eu_hr,ou=people,dc=hadoop,dc=apache,dc=org

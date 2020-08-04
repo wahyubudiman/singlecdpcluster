@@ -1,0 +1,474 @@
+{
+  "metaDataInfo": {
+    "Host name": "demo.hortonworks.com",
+    "Exported by": "admin",
+    "Export time": "Dec 12, 2018 5:18:44 AM",
+    "Ranger apache version": "1.2.0.3.1.0.0-78"
+  },
+  "policies": [
+    {
+      "service": "hdp_hbase",
+      "name": "all - table, column-family, column",
+      "policyType": 0,
+      "policyPriority": 0,
+      "description": "Policy for all - table, column-family, column",
+      "isAuditEnabled": true,
+      "resources": {
+        "column-family": {
+          "values": [
+            "*"
+          ],
+          "isExcludes": false,
+          "isRecursive": false
+        },
+        "column": {
+          "values": [
+            "*"
+          ],
+          "isExcludes": false,
+          "isRecursive": false
+        },
+        "table": {
+          "values": [
+            "*"
+          ],
+          "isExcludes": false,
+          "isRecursive": false
+        }
+      },
+      "policyItems": [
+        {
+          "accesses": [
+            {
+              "type": "read",
+              "isAllowed": true
+            },
+            {
+              "type": "write",
+              "isAllowed": true
+            },
+            {
+              "type": "create",
+              "isAllowed": true
+            },
+            {
+              "type": "admin",
+              "isAllowed": true
+            }
+          ],
+          "users": [
+            "hbase",
+            "ambari-qa"
+          ],
+          "groups": [],
+          "conditions": [],
+          "delegateAdmin": true
+        }
+      ],
+      "denyPolicyItems": [],
+      "allowExceptions": [],
+      "denyExceptions": [],
+      "dataMaskPolicyItems": [],
+      "rowFilterPolicyItems": [],
+      "options": {},
+      "validitySchedules": [],
+      "policyLabels": [],
+      "id": 65,
+      "guid": "666ac27d-699b-4533-97e6-fa2453952597",
+      "isEnabled": true,
+      "version": 1
+    },
+    {
+      "service": "hdp_hbase",
+      "name": "grant-1521854087200",
+      "policyType": 0,
+      "policyPriority": 0,
+      "description": "created by grant",
+      "isAuditEnabled": true,
+      "resources": {
+        "column-family": {
+          "values": [
+            "*"
+          ],
+          "isExcludes": false,
+          "isRecursive": false
+        },
+        "column": {
+          "values": [
+            "*"
+          ],
+          "isExcludes": false,
+          "isRecursive": false
+        },
+        "table": {
+          "values": [
+            "atlas_titan"
+          ],
+          "isExcludes": false,
+          "isRecursive": false
+        }
+      },
+      "policyItems": [
+        {
+          "accesses": [
+            {
+              "type": "read",
+              "isAllowed": true
+            },
+            {
+              "type": "create",
+              "isAllowed": true
+            },
+            {
+              "type": "admin",
+              "isAllowed": true
+            },
+            {
+              "type": "write",
+              "isAllowed": true
+            }
+          ],
+          "users": [
+            "atlas"
+          ],
+          "groups": [],
+          "conditions": [],
+          "delegateAdmin": true
+        }
+      ],
+      "denyPolicyItems": [],
+      "allowExceptions": [],
+      "denyExceptions": [
+        {
+          "accesses": [
+            {
+              "type": "read",
+              "isAllowed": true
+            },
+            {
+              "type": "create",
+              "isAllowed": true
+            },
+            {
+              "type": "admin",
+              "isAllowed": true
+            },
+            {
+              "type": "write",
+              "isAllowed": true
+            }
+          ],
+          "users": [
+            "atlas"
+          ],
+          "groups": [],
+          "conditions": [],
+          "delegateAdmin": true
+        }
+      ],
+      "dataMaskPolicyItems": [],
+      "rowFilterPolicyItems": [],
+      "options": {},
+      "validitySchedules": [],
+      "policyLabels": [],
+      "id": 66,
+      "guid": "5911eb56-863d-432d-8420-7794f9821887",
+      "isEnabled": true,
+      "version": 1
+    },
+    {
+      "service": "hdp_hbase",
+      "name": "grant-1521854087329",
+      "policyType": 0,
+      "policyPriority": 0,
+      "description": "created by grant",
+      "isAuditEnabled": true,
+      "resources": {
+        "column-family": {
+          "values": [
+            "*"
+          ],
+          "isExcludes": false,
+          "isRecursive": false
+        },
+        "column": {
+          "values": [
+            "*"
+          ],
+          "isExcludes": false,
+          "isRecursive": false
+        },
+        "table": {
+          "values": [
+            "ATLAS_ENTITY_AUDIT_EVENTS"
+          ],
+          "isExcludes": false,
+          "isRecursive": false
+        }
+      },
+      "policyItems": [
+        {
+          "accesses": [
+            {
+              "type": "read",
+              "isAllowed": true
+            },
+            {
+              "type": "create",
+              "isAllowed": true
+            },
+            {
+              "type": "admin",
+              "isAllowed": true
+            },
+            {
+              "type": "write",
+              "isAllowed": true
+            }
+          ],
+          "users": [
+            "atlas"
+          ],
+          "groups": [],
+          "conditions": [],
+          "delegateAdmin": true
+        }
+      ],
+      "denyPolicyItems": [],
+      "allowExceptions": [],
+      "denyExceptions": [
+        {
+          "accesses": [
+            {
+              "type": "read",
+              "isAllowed": true
+            },
+            {
+              "type": "create",
+              "isAllowed": true
+            },
+            {
+              "type": "admin",
+              "isAllowed": true
+            },
+            {
+              "type": "write",
+              "isAllowed": true
+            }
+          ],
+          "users": [
+            "atlas"
+          ],
+          "groups": [],
+          "conditions": [],
+          "delegateAdmin": true
+        }
+      ],
+      "dataMaskPolicyItems": [],
+      "rowFilterPolicyItems": [],
+      "options": {},
+      "validitySchedules": [],
+      "policyLabels": [],
+      "id": 67,
+      "guid": "88ee9e2f-d15e-418e-8fb8-feb488ced0e2",
+      "isEnabled": true,
+      "version": 2
+    },
+    {
+      "service": "hdp_hbase",
+      "name": "access: t_forex table",
+      "policyType": 0,
+      "policyPriority": 0,
+      "description": "",
+      "isAuditEnabled": true,
+      "resources": {
+        "column-family": {
+          "values": [
+            "*"
+          ],
+          "isExcludes": false,
+          "isRecursive": false
+        },
+        "column": {
+          "values": [
+            "*"
+          ],
+          "isExcludes": false,
+          "isRecursive": false
+        },
+        "table": {
+          "values": [
+            "T_FOREX"
+          ],
+          "isExcludes": false,
+          "isRecursive": false
+        }
+      },
+      "policyItems": [
+        {
+          "accesses": [
+            {
+              "type": "read",
+              "isAllowed": true
+            },
+            {
+              "type": "write",
+              "isAllowed": true
+            }
+          ],
+          "users": [],
+          "groups": [
+            "analyst",
+            "hr"
+          ],
+          "conditions": [],
+          "delegateAdmin": false
+        },
+        {
+          "accesses": [
+            {
+              "type": "read",
+              "isAllowed": true
+            },
+            {
+              "type": "write",
+              "isAllowed": true
+            },
+            {
+              "type": "create",
+              "isAllowed": true
+            },
+            {
+              "type": "admin",
+              "isAllowed": true
+            }
+          ],
+          "users": [],
+          "groups": [
+            "etl",
+            "dpo"
+          ],
+          "conditions": [],
+          "delegateAdmin": false
+        }
+      ],
+      "denyPolicyItems": [],
+      "allowExceptions": [],
+      "denyExceptions": [],
+      "dataMaskPolicyItems": [],
+      "rowFilterPolicyItems": [],
+      "options": {},
+      "validitySchedules": [],
+      "policyLabels": [],
+      "id": 68,
+      "guid": "18349eb2-d5e4-43be-b038-19df4d51f19b",
+      "isEnabled": true,
+      "version": 1
+    },
+    {
+      "service": "hdp_hbase",
+      "name": "Access on atlas_janus",
+      "policyType": 0,
+      "policyPriority": 0,
+      "description": "",
+      "isAuditEnabled": true,
+      "resources": {
+        "column-family": {
+          "values": [
+            "*"
+          ],
+          "isExcludes": false,
+          "isRecursive": false
+        },
+        "column": {
+          "values": [
+            "*"
+          ],
+          "isExcludes": false,
+          "isRecursive": false
+        },
+        "table": {
+          "values": [
+            "atlas_janus"
+          ],
+          "isExcludes": false,
+          "isRecursive": false
+        }
+      },
+      "policyItems": [
+        {
+          "accesses": [
+            {
+              "type": "read",
+              "isAllowed": true
+            },
+            {
+              "type": "create",
+              "isAllowed": true
+            },
+            {
+              "type": "admin",
+              "isAllowed": true
+            },
+            {
+              "type": "write",
+              "isAllowed": true
+            }
+          ],
+          "users": [
+            "atlas"
+          ],
+          "groups": [],
+          "conditions": [],
+          "delegateAdmin": true
+        }
+      ],
+      "denyPolicyItems": [],
+      "allowExceptions": [],
+      "denyExceptions": [
+        {
+          "accesses": [
+            {
+              "type": "read",
+              "isAllowed": true
+            },
+            {
+              "type": "create",
+              "isAllowed": true
+            },
+            {
+              "type": "admin",
+              "isAllowed": true
+            },
+            {
+              "type": "write",
+              "isAllowed": true
+            }
+          ],
+          "users": [
+            "atlas"
+          ],
+          "groups": [],
+          "conditions": [],
+          "delegateAdmin": true
+        }
+      ],
+      "dataMaskPolicyItems": [],
+      "rowFilterPolicyItems": [],
+      "options": {},
+      "validitySchedules": [],
+      "policyLabels": [
+        ""
+      ],
+      "id": 76,
+      "guid": "d95b8208-73d4-4eba-bce7-807cc4d82ff5",
+      "isEnabled": true,
+      "version": 2
+    }
+  ],
+  "startIndex": 0,
+  "pageSize": 0,
+  "totalCount": 0,
+  "resultSize": 0,
+  "queryTimeMS": 1544591924212
+}

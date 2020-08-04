@@ -1,0 +1,266 @@
+{
+    "classificationDefs": [
+        {
+            "attributeDefs": [],
+            "category": "CLASSIFICATION",
+            "createTime": 1490765806978,
+            "description": "HEALTH_INSURANCE",
+            "guid": "e18b215a-629e-4676-bcfb-5b801623da7c",
+            "name": "HEALTH_INSURANCE",
+            "superTypes": [
+                "INSURANCE"
+            ],
+            "typeVersion": "1.0",
+            "updateTime": 1490765806978,
+            "version": 1
+        },
+        {
+            "attributeDefs": [],
+            "category": "CLASSIFICATION",
+            "createTime": 1490765822551,
+            "description": "LIFE_INSURANCE",
+            "guid": "9076f8bb-a198-4e01-86d6-6c70d96c62eb",
+            "name": "LIFE_INSURANCE",
+            "superTypes": [
+                "INSURANCE"
+            ],
+            "typeVersion": "1.0",
+            "updateTime": 1490765822551,
+            "version": 1
+        },
+        {
+            "attributeDefs": [],
+            "category": "CLASSIFICATION",
+            "createTime": 1490765774174,
+            "description": "INSURANCE",
+            "guid": "e23b1c55-b98d-4b1b-8038-011feeac586d",
+            "name": "INSURANCE",
+            "superTypes": [],
+            "typeVersion": "1.0",
+            "updateTime": 1490765774174,
+            "version": 1
+        },
+        {
+            "attributeDefs": [],
+            "category": "CLASSIFICATION",
+            "createTime": 1490765790890,
+            "description": "AUTO_INSURANCE",
+            "guid": "c9d9609d-254a-4136-8a49-a51d99280b79",
+            "name": "AUTO_INSURANCE",
+            "superTypes": [
+                "INSURANCE"
+            ],
+            "typeVersion": "1.0",
+            "updateTime": 1490765790890,
+            "version": 1
+        },
+        {
+            "attributeDefs": [
+                {
+                    "cardinality": "SINGLE",
+                    "isIndexable": false,
+                    "isOptional": true,
+                    "isUnique": false,
+                    "name": "score",
+                    "typeName": "float",
+                    "valuesMaxCount": 1,
+                    "valuesMinCount": 0
+                }
+            ],
+            "category": "CLASSIFICATION",
+            "createTime": 1490762525929,
+            "description": "DATA_QUALITY",
+            "guid": "557ee7ee-cccd-483e-908d-6204651f7503",
+            "name": "DATA_QUALITY",
+            "superTypes": [],
+            "typeVersion": "1.0",
+            "updateTime": 1490762525929,
+            "version": 1
+        },
+        {
+            "attributeDefs": [],
+            "category": "CLASSIFICATION",
+            "createTime": 1490765849088,
+            "description": "CONSUMER_BANKING",
+            "guid": "acffb3c1-1554-4690-b81a-5420b6bfe92e",
+            "name": "CONSUMER_BANKING",
+            "superTypes": [
+                "BANKING"
+            ],
+            "typeVersion": "1.0",
+            "updateTime": 1490765849088,
+            "version": 1
+        },
+        {
+            "attributeDefs": [
+                {
+                    "cardinality": "SINGLE",
+                    "isIndexable": false,
+                    "isOptional": true,
+                    "isUnique": false,
+                    "name": "type",
+                    "typeName": "string",
+                    "valuesMaxCount": 1,
+                    "valuesMinCount": 0
+                }
+            ],
+            "category": "CLASSIFICATION",
+            "createTime": 1490920322332,
+            "description": "",
+            "guid": "6580e11e-1dd7-49f0-95f8-5df519afbe58",
+            "name": "PII",
+            "superTypes": [],
+            "typeVersion": "1.0",
+            "updateTime": 1490920322332,
+            "version": 1
+        },
+        {
+            "attributeDefs": [],
+            "category": "CLASSIFICATION",
+            "createTime": 1490765834432,
+            "description": "BANKING",
+            "guid": "c1de2835-2d5d-4ca6-a710-b160b6e8b815",
+            "name": "BANKING",
+            "superTypes": [],
+            "typeVersion": "1.0",
+            "updateTime": 1490765834432,
+            "version": 1
+        },
+        {
+            "attributeDefs": [],
+            "category": "CLASSIFICATION",
+            "createTime": 1490764363302,
+            "description": "FINANCE_PII",
+            "guid": "b9716c12-45f1-425d-9fbf-1f446a77c187",
+            "name": "FINANCE_PII",
+            "superTypes": [
+                "PII"
+            ],
+            "typeVersion": "1.0",
+            "updateTime": 1490764363302,
+            "version": 1
+        },
+        {
+            "attributeDefs": [],
+            "category": "CLASSIFICATION",
+            "createTime": 1490765881491,
+            "description": "WEALTH_MANAGEMENT",
+            "guid": "8e41bead-6933-4530-bcae-ac9a72ccde37",
+            "name": "WEALTH_MANAGEMENT",
+            "superTypes": [
+                "BANKING"
+            ],
+            "typeVersion": "1.0",
+            "updateTime": 1490765881491,
+            "version": 1
+        },
+        {
+            "attributeDefs": [],
+            "category": "CLASSIFICATION",
+            "createTime": 1490764375142,
+            "description": "VENDOR_PII",
+            "guid": "4cf9da58-bb06-41f1-bf88-609eecc7a20f",
+            "name": "VENDOR_PII",
+            "superTypes": [
+                "PII"
+            ],
+            "typeVersion": "1.0",
+            "updateTime": 1490764375142,
+            "version": 1
+        },
+        {
+            "attributeDefs": [],
+            "category": "CLASSIFICATION",
+            "createTime": 1490765866061,
+            "description": "SMALL_BUSINESS_BANKING",
+            "guid": "74302ec3-051d-4284-9c8d-4f492522686d",
+            "name": "SMALL_BUSINESS_BANKING",
+            "superTypes": [
+                "BANKING"
+            ],
+            "typeVersion": "1.0",
+            "updateTime": 1490765866061,
+            "version": 1
+        },
+        {
+            "attributeDefs": [
+                {
+                    "cardinality": "SINGLE",
+                    "isIndexable": false,
+                    "isOptional": true,
+                    "isUnique": false,
+                    "name": "expiry_date",
+                    "typeName": "string",
+                    "valuesMaxCount": 1,
+                    "valuesMinCount": 0
+                }
+            ],
+            "category": "CLASSIFICATION",
+            "createTime": 1490765103995,
+            "description": "EXPIRES_ON",
+            "guid": "6f3d1277-15ad-49b9-bcee-fdddbd4a10e6",
+            "name": "EXPIRES_ON",
+            "superTypes": [],
+            "typeVersion": "1.0",
+            "updateTime": 1490765103995,
+            "version": 1
+        },
+        {
+            "attributeDefs": [],
+            "category": "CLASSIFICATION",
+            "createTime": 1490762500725,
+            "createdBy": "admin",
+            "description": "SENSITIVE",
+            "guid": "38aba6e0-5f96-45a7-9721-d0da3463f1d5",
+            "name": "SENSITIVE",
+            "superTypes": [],
+            "typeVersion": "1.0",
+            "updateTime": 1490762500725,
+            "updatedBy": "admin",
+            "version": 1
+        },                
+		{
+			"attributeDefs": [
+				{
+					"cardinality": "SINGLE",
+					"includeInNotification": false,
+					"isIndexable": false,
+					"isOptional": true,
+					"isUnique": false,
+					"name": "type",
+					"typeName": "string",
+					"valuesMaxCount": 1,
+					"valuesMinCount": 0
+				}
+			],
+			"category": "CLASSIFICATION",
+			"createTime": 1532068460862,
+			"createdBy": "admin",
+			"description": "ENCRYPTED",
+			"entityTypes": [],
+			"guid": "5a10c2e2-7956-424f-9e65-624744fade41",
+			"name": "ENCRYPTED",
+			"subTypes": [],
+			"superTypes": [],
+			"typeVersion": "1.0",
+			"updateTime": 1532068460862,
+			"updatedBy": "admin",
+			"version": 1
+		},        
+        {
+            "attributeDefs": [],
+            "category": "CLASSIFICATION",
+            "createTime": 1490762500705,
+            "description": "REFERENCE_DATA",
+            "guid": "68333b92-c305-41df-b325-1fd63cf2007a",
+            "name": "REFERENCE_DATA",
+            "superTypes": [],
+            "typeVersion": "1.0",
+            "updateTime": 1490762500705,
+            "version": 1
+        }
+    ],
+    "entityDefs": [ ],
+    "enumDefs": [ ],
+    "structDefs": [ ]
+}

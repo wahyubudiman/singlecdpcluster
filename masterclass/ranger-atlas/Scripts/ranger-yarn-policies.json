@@ -1,0 +1,240 @@
+{
+  "metaDataInfo": {
+    "Host name": "demo.hortonworks.com",
+    "Exported by": "admin",
+    "Export time": "Dec 12, 2018 3:15:20 AM",
+    "Ranger apache version": "1.2.0.3.1.0.0-78"
+  },
+  "policies": [
+    {
+      "service": "hdp_yarn",
+      "name": "all - queue",
+      "policyType": 0,
+      "policyPriority": 0,
+      "description": "Policy for all - queue",
+      "isAuditEnabled": true,
+      "resources": {
+        "queue": {
+          "values": [
+            "*"
+          ],
+          "isExcludes": false,
+          "isRecursive": true
+        }
+      },
+      "policyItems": [
+        {
+          "accesses": [
+            {
+              "type": "submit-app",
+              "isAllowed": true
+            },
+            {
+              "type": "admin-queue",
+              "isAllowed": true
+            }
+          ],
+          "users": [
+            "yarn"
+          ],
+          "groups": [],
+          "conditions": [],
+          "delegateAdmin": true
+        }
+      ],
+      "denyPolicyItems": [],
+      "allowExceptions": [],
+      "denyExceptions": [],
+      "dataMaskPolicyItems": [],
+      "rowFilterPolicyItems": [],
+      "options": {},
+      "validitySchedules": [],
+      "policyLabels": [],
+      "id": 72,
+      "guid": "63cfd00f-a987-4ea6-8879-b16b4521f095",
+      "isEnabled": true,
+      "version": 1
+    },
+    {
+      "service": "hdp_yarn",
+      "name": "Service Check User Policy for Yarn",
+      "policyType": 0,
+      "policyPriority": 0,
+      "description": "Policy for Service Check User Policy for Yarn",
+      "isAuditEnabled": true,
+      "resources": {
+        "queue": {
+          "values": [
+            "default"
+          ],
+          "isExcludes": false,
+          "isRecursive": false
+        }
+      },
+      "policyItems": [
+        {
+          "accesses": [
+            {
+              "type": "submit-app",
+              "isAllowed": true
+            }
+          ],
+          "users": [
+            "ambari-qa"
+          ],
+          "groups": [],
+          "conditions": [],
+          "delegateAdmin": false
+        }
+      ],
+      "denyPolicyItems": [],
+      "allowExceptions": [],
+      "denyExceptions": [],
+      "dataMaskPolicyItems": [],
+      "rowFilterPolicyItems": [],
+      "options": {},
+      "validitySchedules": [],
+      "policyLabels": [],
+      "id": 73,
+      "guid": "2f326f3c-263b-4325-acec-98dc8f3b96f8",
+      "isEnabled": true,
+      "version": 1
+    },
+    {
+      "service": "hdp_yarn",
+      "name": "default queue",
+      "policyType": 0,
+      "policyPriority": 0,
+      "description": "",
+      "isAuditEnabled": true,
+      "resources": {
+        "queue": {
+          "values": [
+            "root.default"
+          ],
+          "isExcludes": false,
+          "isRecursive": true
+        }
+      },
+      "policyItems": [
+        {
+          "accesses": [
+            {
+              "type": "admin-queue",
+              "isAllowed": true
+            }
+          ],
+          "users": [
+            "HTTP",
+            "ambari-qa"
+          ],
+          "groups": [],
+          "conditions": [],
+          "delegateAdmin": false
+        },
+        {
+          "accesses": [
+            {
+              "type": "submit-app",
+              "isAllowed": true
+            }
+          ],
+          "users": [
+            "hive"
+          ],
+          "groups": [
+            "etl",
+            "eu_employee",
+            "us_employee"
+          ],
+          "conditions": [],
+          "delegateAdmin": false
+        }
+      ],
+      "denyPolicyItems": [],
+      "allowExceptions": [],
+      "denyExceptions": [],
+      "dataMaskPolicyItems": [],
+      "rowFilterPolicyItems": [],
+      "options": {},
+      "validitySchedules": [],
+      "policyLabels": [
+        ""
+      ],
+      "id": 74,
+      "guid": "0634c226-4fe2-4a64-93ce-ef5ca112df8e",
+      "isEnabled": true,
+      "version": 2
+    },
+    {
+      "service": "hdp_yarn",
+      "name": "LLAP queue",
+      "policyType": 0,
+      "policyPriority": 0,
+      "description": "",
+      "isAuditEnabled": true,
+      "resources": {
+        "queue": {
+          "values": [
+            "root.llap"
+          ],
+          "isExcludes": false,
+          "isRecursive": true
+        }
+      },
+      "policyItems": [
+        {
+          "accesses": [
+            {
+              "type": "admin-queue",
+              "isAllowed": true
+            }
+          ],
+          "users": [
+            "HTTP"
+          ],
+          "groups": [],
+          "conditions": [],
+          "delegateAdmin": false
+        },
+        {
+          "accesses": [
+            {
+              "type": "submit-app",
+              "isAllowed": true
+            },
+            {
+              "type": "admin-queue",
+              "isAllowed": true
+            }
+          ],
+          "users": [],
+          "groups": [
+            "eu_employee",
+            "us_employee",
+            "etl"
+          ],
+          "conditions": [],
+          "delegateAdmin": false
+        }
+      ],
+      "denyPolicyItems": [],
+      "allowExceptions": [],
+      "denyExceptions": [],
+      "dataMaskPolicyItems": [],
+      "rowFilterPolicyItems": [],
+      "options": {},
+      "validitySchedules": [],
+      "policyLabels": [],
+      "id": 75,
+      "guid": "bf94706a-8453-40ff-ba6a-05b78ec053c4",
+      "isEnabled": true,
+      "version": 1
+    }
+  ],
+  "startIndex": 0,
+  "pageSize": 0,
+  "totalCount": 0,
+  "resultSize": 0,
+  "queryTimeMS": 1544584520731
+}
